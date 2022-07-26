@@ -13,7 +13,7 @@ export class AppComponent {
   myCanvas: ElementRef<HTMLCanvasElement>;
   public context: CanvasRenderingContext2D;
 
-  public totalTime = 20000;
+  public totalTime = 10000;
   public step = 10;
   public animations;
 
