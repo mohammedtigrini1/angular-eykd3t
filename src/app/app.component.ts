@@ -19,7 +19,6 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.animations = t;
-    console.log(this.animations);
     this.context = this.myCanvas.nativeElement.getContext('2d');
     this.animationLoop();
   }
@@ -49,8 +48,30 @@ export class AppComponent {
 
   executeAnimation(time) {
     for (let animation of this.animations) {
+      if (animation.action == 'move') {
+        this.computePosition(animation, time);
+      }
       console.log(animation);
     }
+  }
+
+  computePosition(animation, time) {
+    // position it is supposed to be at if the action is to move.
+    // Initial position x + Math.floor(speed*time)
+    return {
+      positionX:
+        animation.from.x +
+        Math.floor(
+          this.speed(animation.from, animation.to).xVelocity *
+            (animation.from.t - time)
+        ),
+      positionY:
+        animation.from.x +
+        Math.floor(
+          this.speed(animation.from, animation.to).yVelocity *
+            (animation.from.t - time)
+        ),
+    };
   }
 
   speed(from, to) {
