@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ElementRef, NgModule, ViewChild } from '@angular/core';
+import * as t from './test.json';
 
 @Component({
   selector: 'my-app',
@@ -14,8 +15,11 @@ export class AppComponent {
 
   public totalTime = 20000;
   public step = 10;
+  public animations;
 
   ngAfterViewInit(): void {
+    this.animations = t;
+    console.log(this.animations);
     this.context = this.myCanvas.nativeElement.getContext('2d');
     this.animationLoop();
   }
@@ -43,10 +47,21 @@ export class AppComponent {
     );
   }
 
+  executeAnimation(time) {}
+
+  speed(from, to) {
+    return {
+      xVelocity: (from.x - from.x) / (to.t - from.t),
+      yVelocity: (from.y - from.y) / (to.t - from.t),
+    };
+  }
+
   drawRectangle(time) {
     this.context.fillStyle = '#FF0000';
     this.context.fillRect(time / 200, time / 200, 40, 40);
   }
 
-  appear() {}
+  appear() {
+    console.log('hello');
+  }
 }

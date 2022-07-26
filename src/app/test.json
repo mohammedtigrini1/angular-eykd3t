@@ -1,3 +1,14 @@
 {
-  "a" : "test"
+  "shape": "rectangle",
+  "action": "move",
+  "from": {
+    "t": 0,
+    "x": 0,
+    "y": 0
+  },
+  "to": {
+    "t": 20000,
+    "x": 150,
+    "y": 150
+  }
 }
