@@ -52,7 +52,6 @@ export class AppComponent {
       if (animation.action == 'move') {
         if (time > animation.from.t && time < animation.to.t) {
           const position = this.computePosition(animation, time);
-          // console.log(position);
           this.drawRectangle(
             position.x,
             position.y,

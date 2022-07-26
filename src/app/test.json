@@ -30,5 +30,37 @@
       "x": 100,
       "y": 100
     }
+  },
+  {
+    "shape": "rectangle",
+    "height": 30,
+    "width": 30,
+    "action": "move",
+    "from": {
+      "t": 4000,
+      "x": 100,
+      "y": 100
+    },
+    "to": {
+      "t": 6000,
+      "x": 0,
+      "y": 100
+    }
+  },
+  {
+    "shape": "rectangle",
+    "height": 30,
+    "width": 30,
+    "action": "move",
+    "from": {
+      "t": 6000,
+      "x": 0,
+      "y": 100
+    },
+    "to": {
+      "t": 8000,
+      "x": 0,
+      "y": 0
+    }
   }
 ]
