@@ -14,7 +14,7 @@ export class AppComponent {
   public context: CanvasRenderingContext2D;
 
   public totalTime = 10000;
-  public step = 100;
+  public step = 5;
   public animations;
 
   ngAfterViewInit(): void {
@@ -46,16 +46,20 @@ export class AppComponent {
     );
   }
 
+  // TODO: MAKE THE RECTANGLE STAY AFTER IT HAS BEEN DRAWN.
   executeAnimation(time) {
-    for (let animation of this.animations) {
+    for (let animation of this.animations.default) {
       if (animation.action == 'move') {
-        const position = this.computePosition(animation, time);
-        this.drawRectangle(
-          position.x,
-          position.y,
-          animation.height,
-          animation.width
-        );
+        if (time > animation.from.t && time < animation.to.t) {
+          const position = this.computePosition(animation, time);
+          // console.log(position);
+          this.drawRectangle(
+            position.x,
+            position.y,
+            animation.height,
+            animation.width
+          );
+        }
       }
     }
   }
@@ -79,17 +83,13 @@ export class AppComponent {
 
   speed(from, to) {
     return {
-      xVelocity: (from.x - from.x) / (to.t - from.t),
-      yVelocity: (from.y - from.y) / (to.t - from.t),
+      xVelocity: (from.x - to.x) / (to.t - from.t),
+      yVelocity: (from.y - to.y) / (to.t - from.t),
     };
   }
 
   drawRectangle(x, y, height, width) {
     this.context.fillStyle = '#FF0000';
     this.context.fillRect(x, y, height, width);
-  }
-
-  appear() {
-    console.log('hello');
   }
 }
