@@ -49,23 +49,26 @@ export class AppComponent {
   executeAnimation(time) {
     for (let animation of this.animations) {
       if (animation.action == 'move') {
-        this.computePosition(animation, time);
+        const position = this.computePosition(animation, time);
+        this.drawRectangle(
+          position.x,
+          position.y,
+          animation.height,
+          animation.width
+        );
       }
-      console.log(animation);
     }
   }
 
   computePosition(animation, time) {
-    // position it is supposed to be at if the action is to move.
-    // Initial position x + Math.floor(speed*time)
     return {
-      positionX:
+      x:
         animation.from.x +
         Math.floor(
           this.speed(animation.from, animation.to).xVelocity *
             (animation.from.t - time)
         ),
-      positionY:
+      y:
         animation.from.x +
         Math.floor(
           this.speed(animation.from, animation.to).yVelocity *
@@ -81,9 +84,9 @@ export class AppComponent {
     };
   }
 
-  drawRectangle(time) {
+  drawRectangle(x, y, height, width) {
     this.context.fillStyle = '#FF0000';
-    this.context.fillRect(time / 200, time / 200, 40, 40);
+    this.context.fillRect(x, y, height, width);
   }
 
   appear() {

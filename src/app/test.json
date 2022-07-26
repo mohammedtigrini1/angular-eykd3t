@@ -1,6 +1,8 @@
 [
   {
     "shape": "rectangle",
+    "height": 30,
+    "width": 30,
     "action": "move",
     "from": {
       "t": 0,
