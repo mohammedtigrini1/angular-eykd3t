@@ -14,7 +14,7 @@ export class AppComponent {
   public context: CanvasRenderingContext2D;
 
   public totalTime = 10000;
-  public step = 10;
+  public step = 100;
   public animations;
 
   ngAfterViewInit(): void {
@@ -32,7 +32,7 @@ export class AppComponent {
         return;
       }
       this.erase();
-      this.drawRectangle(temp);
+      this.executeAnimation(temp);
       temp += this.step;
     }, this.step);
   }
@@ -47,7 +47,11 @@ export class AppComponent {
     );
   }
 
-  executeAnimation(time) {}
+  executeAnimation(time) {
+    for (let animation of this.animations) {
+      console.log(animation);
+    }
+  }
 
   speed(from, to) {
     return {
