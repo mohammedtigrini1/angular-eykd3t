@@ -52,6 +52,7 @@ export class AppComponent {
       if (animation.action == 'move') {
         if (time > animation.from.t && time < animation.to.t) {
           const position = this.computePosition(animation, time);
+          console.log(position);
           this.drawRectangle(
             position.x,
             position.y,
@@ -72,7 +73,7 @@ export class AppComponent {
             (animation.from.t - time)
         ),
       y:
-        animation.from.x +
+        animation.from.y +
         Math.floor(
           this.speed(animation.from, animation.to).yVelocity *
             (animation.from.t - time)
