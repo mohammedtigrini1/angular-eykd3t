@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { ElementRef, NgModule, ViewChild } from '@angular/core';
 import * as animations from './pythagorian_theorem.json';
+// import * as animations from './test.json';
 
 @Component({
   selector: 'my-app',
@@ -27,8 +28,12 @@ export class AppComponent {
     let currentTime = 0;
     const interval = setInterval(() => {
       if (currentTime > this.totalTime) {
-        clearInterval(interval);
-        return;
+        if (this.isLooping) {
+          currentTime = 0; // reset the time.
+        } else {
+          clearInterval(interval);
+          return;
+        }
       }
       this.erase();
       this.executeAnimation(currentTime);
