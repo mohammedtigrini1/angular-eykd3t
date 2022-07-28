@@ -118,6 +118,9 @@ export class AppComponent {
   @HostListener('window:keydown', ['$event'])
   spaceEvent(event: any) {
     console.log('here');
-    console.log(event.key);
+    console.log(event.code);
+    if (event.code == 'Space') {
+      this.isLooping = !this.isLooping;
+    }
   }
 }
