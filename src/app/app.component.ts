@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ElementRef, NgModule, ViewChild } from '@angular/core';
-import * as t from './test.json';
+import * as animations from './pythagorian_theorem.json';
 
 @Component({
   selector: 'my-app',
@@ -18,21 +18,21 @@ export class AppComponent {
   public animations;
 
   ngAfterViewInit(): void {
-    this.animations = t;
+    this.animations = animations;
     this.context = this.myCanvas.nativeElement.getContext('2d');
     this.animationLoop();
   }
 
   animationLoop() {
-    let temp = 0;
+    let currentTime = 0;
     const interval = setInterval(() => {
-      if (temp > this.totalTime) {
+      if (currentTime > this.totalTime) {
         clearInterval(interval);
         return;
       }
       this.erase();
-      this.executeAnimation(temp);
-      temp += this.step;
+      this.executeAnimation(currentTime);
+      currentTime += this.step;
     }, this.step);
   }
 
@@ -47,11 +47,14 @@ export class AppComponent {
   }
 
   // TODO: MAKE THE RECTANGLE STAY AFTER IT HAS BEEN DRAWN.
-  executeAnimation(time) {
+  executeAnimation(currentTime) {
     for (let animation of this.animations.default) {
       if (animation.action == 'move') {
-        if (time > animation.from.t && time < animation.to.t) {
-          const position = this.computePosition(animation, time);
+        if (currentTime > animation.from.t && currentTime < animation.to.t) {
+          const position = this.computePosition(animation, currentTime);
+          // TODO
+          // this.drawShape(animation.shape, )
+          // TODO: Replace by appropriate method
           this.drawRectangle(
             position.x,
             position.y,
@@ -87,8 +90,34 @@ export class AppComponent {
     };
   }
 
+  // TODO: Finish and make work.
+  drawShape(shape, info) {
+    if (shape == 'rectamgle') {
+      // this.drawRectangle(x, y, height, width);
+    } else if (shape == 'rectangle') {
+      this.drawTriangle(info);
+    }
+  }
+
   drawRectangle(x, y, height, width) {
     this.context.fillStyle = '#FF0000';
     this.context.fillRect(x, y, height, width);
+  }
+
+  drawTriangle(info) {
+    this.context.beginPath();
+    this.context.moveTo(75, 50);
+    this.context.lineTo(100, 75);
+    this.context.lineTo(100, 25);
+    this.context.fill();
+  }
+
+  // TODO: PLAY ANIMATION ON A LOOP.
+  private isLooping = true;
+  // if person taps on space bar, stop loop.
+  @HostListener('window:keydown', ['$event'])
+  spaceEvent(event: any) {
+    console.log('here');
+    console.log(event.key);
   }
 }
