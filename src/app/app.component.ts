@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { ElementRef, NgModule, ViewChild } from '@angular/core';
+import { ElementRef, ViewChild } from '@angular/core';
 import * as animations from './pythagorian_theorem.json';
 // import * as animations from './test.json';
 
@@ -59,13 +59,13 @@ export class AppComponent {
           const position = this.computePosition(animation, currentTime);
           // TODO
           // this.drawShape(animation.shape, )
-          // TODO: Replace by appropriate method
-          this.drawRectangle(
-            position.x,
-            position.y,
-            animation.height,
-            animation.width
-          );
+          // // TODO: Replace by appropriate method
+          // this.drawRectangle(
+          //   position.x,
+          //   position.y,
+          //   animation.height,
+          //   animation.width
+          // );
         }
       }
     }
@@ -98,22 +98,22 @@ export class AppComponent {
   // TODO: Finish and make work.
   drawShape(shape, info) {
     if (shape == 'rectamgle') {
-      // this.drawRectangle(x, y, height, width);
+      this.drawRectangle(info);
     } else if (shape == 'rectangle') {
       this.drawTriangle(info);
     }
   }
 
-  drawRectangle(x, y, height, width) {
+  drawRectangle(info) {
     this.context.fillStyle = '#FF0000';
-    this.context.fillRect(x, y, height, width);
+    this.context.fillRect(info.x, info.y, info.height, info.width);
   }
 
   drawTriangle(info) {
     this.context.beginPath();
-    this.context.moveTo(75, 50);
-    this.context.lineTo(100, 75);
-    this.context.lineTo(100, 25);
+    this.context.moveTo(info[0].x, info[0].y);
+    this.context.lineTo(info[1].x, info[1].y);
+    this.context.lineTo(info[2].x, info[2].y);
     this.context.fill();
   }
 

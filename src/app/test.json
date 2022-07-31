@@ -1,8 +1,12 @@
 [
   {
-    "shape": "rectangle",
-    "height": 10,
-    "width": 10,
+    "name": "rectangle",
+    "info": {
+      "height": 10,
+      "width": 10,
+      "x": 0,
+      "y": 0
+    },
     "action": "move",
     "from": {
       "t": 0,
