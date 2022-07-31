@@ -58,14 +58,7 @@ export class AppComponent {
         if (currentTime > animation.from.t && currentTime < animation.to.t) {
           const position = this.computePosition(animation, currentTime);
           // TODO
-          // this.drawShape(animation.shape, )
-          // // TODO: Replace by appropriate method
-          // this.drawRectangle(
-          //   position.x,
-          //   position.y,
-          //   animation.height,
-          //   animation.width
-          // );
+          this.drawShape(animation.shape, animation.info);
         }
       }
     }
