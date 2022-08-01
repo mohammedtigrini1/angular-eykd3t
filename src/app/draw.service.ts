@@ -1,4 +1,5 @@
 import { ElementRef, Injectable, ViewChild } from '@angular/core';
+import { ShapesService } from './shapes.service';
 
 // Everything related to drawing on the board.
 @Injectable()
@@ -6,11 +7,17 @@ export class DrawService {
   private _canvas: ElementRef<HTMLCanvasElement>;
   private _context: CanvasRenderingContext2D;
 
-  constructor() {}
+  constructor(public shapeService: ShapesService) {}
 
   set canvas(canvas) {
     this._canvas = canvas;
     this._context = this._canvas.nativeElement.getContext('2d');
+  }
+
+  drawShapes() {
+    for (let shape of this.shapeService.shapes) {
+      this.drawShapeInCanvas(shape);
+    }
   }
 
   eraseCanvas() {

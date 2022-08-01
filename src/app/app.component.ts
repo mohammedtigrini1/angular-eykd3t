@@ -43,14 +43,16 @@ export class AppComponent {
     //     }
     //   }
     //   this.erase();
-    //   this.executeAnimation(currentTime);
+    // for(let shape of this.shapes) {
+    //   //   this.executeAnimation(shape, currentTime);
+    // }
     //   currentTime += this.step;
     // }, this.step);
   }
 
   // TODO: MAKE THE RECTANGLE STAY AFTER IT HAS BEEN DRAWN.
-  executeAnimation(currentTime) {
-    for (let animation of this.animations.default) {
+  executeAnimation(shape, currentTime) {
+    for (let animation of shape.animations) {
       if (animation.name == 'appear') {
         // this.shapeService.addShape({...animation.shape});
         this.drawService.drawShapeInCanvas(animation.name);
@@ -65,6 +67,7 @@ export class AppComponent {
         }
       }
     }
+    this.drawService.draw
   }
 
   computePosition(animation, time) {
