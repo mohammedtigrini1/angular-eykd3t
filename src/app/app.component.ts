@@ -62,8 +62,7 @@ export class AppComponent {
         }
       } else if (animation.name == 'move') {
         if (currentTime > animation.from.t && currentTime < animation.to.t) {
-          //   const selectionRectangle = this.computeSelectionRectangle();
-          //   const position = this.computePosition(selectionRectangle, currentTime);
+          //   const position = this.computePosition(animation, currentTime);
           //   this.drawService.drawShapeInCanvas(animation.shape);
           //   shape.info.id
           //   this.shapeService.changeShape(shape.info)
@@ -71,30 +70,6 @@ export class AppComponent {
       }
     }
     this.drawService.drawShapes();
-  }
-
-  computePosition(animation, time) {
-    return {
-      x:
-        animation.from.x +
-        Math.floor(
-          this.speed(animation.from, animation.to).xVelocity *
-            (animation.from.t - time)
-        ),
-      y:
-        animation.from.y +
-        Math.floor(
-          this.speed(animation.from, animation.to).yVelocity *
-            (animation.from.t - time)
-        ),
-    };
-  }
-
-  speed(from, to) {
-    return {
-      xVelocity: (from.x - to.x) / (to.t - from.t),
-      yVelocity: (from.y - to.y) / (to.t - from.t),
-    };
   }
 
   // TODO: PLAY ANIMATION ON A LOOP.
