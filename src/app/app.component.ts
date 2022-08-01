@@ -41,8 +41,8 @@ export class AppComponent {
     //       clearInterval(interval);
     //       return;
     //     }
-    //   }
-    //   this.erase();
+    // }
+    // this.drawService.eraseCanvas();
     // for(let shape of this.shapes) {
     //   //   this.executeAnimation(shape, currentTime);
     // }
@@ -55,19 +55,19 @@ export class AppComponent {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
         if (animation.t == currentTime) {
-          // this.shapeService.addShape({...animation.shape});
+          // this.shapeService.addShape(animation.shape);
         }
       } else if (animation.name == 'disappear') {
         // TODO: Implement some kind of shape manager or something that would be responsible
         // to draw the stuff and erase the shit.
         if (animation.t == currentTime) {
-          // this.shapeService.deleteshape();
+          // this.shapeService.deleteshape(shape);
         }
       } else if (animation.name == 'move') {
-        if (currentTime > animation.from.t && currentTime < animation.to.t) {
-          const position = this.computePosition(animation, currentTime);
-          this.drawService.drawShapeInCanvas(animation.shape);
-        }
+        // if (currentTime > animation.from.t && currentTime < animation.to.t) {
+        //   const position = this.computePosition(animation, currentTime);
+        //   this.drawService.drawShapeInCanvas(animation.shape);
+        // }
       }
     }
     this.drawService.drawShapes();
