@@ -61,25 +61,16 @@ export class AppComponent {
           this.shapeService.deleteShape(shape.info.id);
         }
       } else if (animation.name == 'move') {
-        // if (currentTime > animation.from.t && currentTime < animation.to.t) {
-        //   const selectionRectangle = this.computeSelectionRectangle();
-        //   const position = this.computePosition(selectionRectangle, currentTime);
-        //   this.drawService.drawShapeInCanvas(animation.shape);
-        //   shape.info.id
-        //   this.shapeService.changeShape(shape.info)
-        // }
+        if (currentTime > animation.from.t && currentTime < animation.to.t) {
+          //   const selectionRectangle = this.computeSelectionRectangle();
+          //   const position = this.computePosition(selectionRectangle, currentTime);
+          //   this.drawService.drawShapeInCanvas(animation.shape);
+          //   shape.info.id
+          //   this.shapeService.changeShape(shape.info)
+        }
       }
     }
     this.drawService.drawShapes();
-  }
-
-  computeSelectionRectangle(shape) {
-    if (shape.name == 'rectangle') {
-      // give out height and width of the rectangle
-    } else if (shape.name == 'triangle') {
-      // find the furthest points up, down left and right to compute a
-      // selection rectangle.
-    }
   }
 
   computePosition(animation, time) {
