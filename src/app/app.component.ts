@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
-import * as info from './pythagorian_theorem.json';
+import * as shapes from './pythagorian_theorem.json';
 import { ShapesService } from './shapes.service';
 // import * as animations from './test.json';
 
@@ -17,7 +17,7 @@ export class AppComponent {
 
   public totalTime = 10000;
   public step = 5;
-  public info;
+  public shapes;
 
   constructor(
     public drawService: DrawService,
@@ -26,12 +26,12 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.drawService.canvas = this.myCanvas;
-    this.info = info;
+    this.shapes = shapes;
     this.animationLoop();
   }
 
   animationLoop() {
-    console.log(this.info);
+    console.log(this.shapes);
     let currentTime = 0;
     // const interval = setInterval(() => {
     //   if (currentTime > this.totalTime) {
