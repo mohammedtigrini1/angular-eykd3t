@@ -54,12 +54,15 @@ export class AppComponent {
   executeAnimation(shape, currentTime) {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
-        // this.shapeService.addShape({...animation.shape});
-        this.drawService.drawShapeInCanvas(animation.name);
+        if (animation.t == currentTime) {
+          // this.shapeService.addShape({...animation.shape});
+        }
       } else if (animation.name == 'disappear') {
         // TODO: Implement some kind of shape manager or something that would be responsible
         // to draw the stuff and erase the shit.
-        // this.shapeService.addShape();
+        if (animation.t == currentTime) {
+          // this.shapeService.deleteshape();
+        }
       } else if (animation.name == 'move') {
         if (currentTime > animation.from.t && currentTime < animation.to.t) {
           const position = this.computePosition(animation, currentTime);
@@ -67,7 +70,7 @@ export class AppComponent {
         }
       }
     }
-    this.drawService.draw
+    this.drawService.drawShapes();
   }
 
   computePosition(animation, time) {
