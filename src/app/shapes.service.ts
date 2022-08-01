@@ -10,11 +10,11 @@ export class ShapesService {
     this.shapes.push(info);
   }
 
-  public changeShape(shapeIndex, info) {
-    this.shapes.map((i) => (i.id == shapeIndex ? (i = info) : i));
+  public changeShape(info) {
+    this.shapes.map((i) => (i.id == info.id ? (i = info) : i));
   }
 
-  public deleteShape(shapeIndex) {
-    this.shapes = this.shapes.filter((i) => i.id != shapeIndex);
+  public deleteShape(id) {
+    this.shapes = this.shapes.filter((i) => i.id != id);
   }
 }

@@ -55,7 +55,7 @@ export class AppComponent {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
         if (animation.t == currentTime) {
-          // this.shapeService.addShape(animation.shape);
+          this.shapeService.addShape(shape.info);
         }
       } else if (animation.name == 'disappear') {
         // TODO: Implement some kind of shape manager or something that would be responsible
