@@ -15,7 +15,7 @@ export class AppComponent {
   @ViewChild('myCanvas')
   myCanvas: ElementRef<HTMLCanvasElement>;
 
-  public totalTime = 10000;
+  public totalTime = 1000;
   public step = 5;
   public shapes;
 
@@ -26,7 +26,7 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.drawService.canvas = this.myCanvas;
-    this.shapes = shapes;
+    this.shapes = shapes.default;
     this.animationLoop();
   }
 
