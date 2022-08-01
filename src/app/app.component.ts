@@ -1,7 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
-import * as animations from './pythagorian_theorem.json';
+import * as info from './pythagorian_theorem.json';
+import { ShapesService } from './shapes.service';
 // import * as animations from './test.json';
 
 @Component({
@@ -16,16 +17,21 @@ export class AppComponent {
 
   public totalTime = 10000;
   public step = 5;
-  public animations;
+  public info;
 
-  constructor(public drawService: DrawService) {}
+  constructor(
+    public drawService: DrawService,
+    public shapeService: ShapesService
+  ) {}
 
   ngAfterViewInit(): void {
-    this.animations = animations;
+    this.drawService.canvas = this.myCanvas;
+    this.info = info;
     this.animationLoop();
   }
 
   animationLoop() {
+    console.log(this.info);
     let currentTime = 0;
     // const interval = setInterval(() => {
     //   if (currentTime > this.totalTime) {
@@ -46,15 +52,16 @@ export class AppComponent {
   executeAnimation(currentTime) {
     for (let animation of this.animations.default) {
       if (animation.name == 'appear') {
-        this.drawShape(animation.name, animation.info);
+        // this.shapeService.addShape({...animation.shape});
+        this.drawService.drawShapeInCanvas(animation.name);
       } else if (animation.name == 'disappear') {
         // TODO: Implement some kind of shape manager or something that would be responsible
         // to draw the stuff and erase the shit.
+        // this.shapeService.addShape();
       } else if (animation.name == 'move') {
         if (currentTime > animation.from.t && currentTime < animation.to.t) {
           const position = this.computePosition(animation, currentTime);
-          // TODO
-          this.drawShape(animation.shape, animation.info);
+          this.drawService.drawShapeInCanvas(animation.shape);
         }
       }
     }

@@ -23,12 +23,11 @@ export class DrawService {
     );
   }
 
-  // TODO: Finish and make work.
-  drawShapeInCanvas(shape, info) {
-    if (shape == 'rectangle') {
-      this.drawRectangleInCanvas(info);
-    } else if (shape == 'rectangle') {
-      this.drawTriangleInCanvas(info);
+  drawShapeInCanvas(shape) {
+    if (shape.name == 'rectangle') {
+      this.drawRectangleInCanvas(shape.info);
+    } else if (shape.name == 'rectangle') {
+      this.drawTriangleInCanvas(shape.info);
     }
   }
 

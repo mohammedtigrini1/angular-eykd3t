@@ -1,7 +1,8 @@
 [
   {
-    "name": "rectangle",
-    "info": {
+    "shape": {
+      "id": 1,
+      "name": "rectangle",
       "height": 10,
       "width": 10,
       "x": 0,
@@ -63,6 +64,10 @@
           "x": 0,
           "y": 0
         }
+      },
+      {
+        "name": "disappear",
+        "t": 10000
       }
     ]
   }

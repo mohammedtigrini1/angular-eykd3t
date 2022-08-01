@@ -8,7 +8,7 @@ export class ShapesService {
 
   public addShape(shape, info) {}
 
-  public changeShapePosition(shapeIndex, info) {
-    
-  }
+  public changeShapePosition(shapeIndex, info) {}
+
+  public deleteShape(shapeIndex) {}
 }
