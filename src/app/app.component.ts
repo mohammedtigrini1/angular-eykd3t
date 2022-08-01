@@ -58,10 +58,8 @@ export class AppComponent {
           this.shapeService.addShape(shape.info);
         }
       } else if (animation.name == 'disappear') {
-        // TODO: Implement some kind of shape manager or something that would be responsible
-        // to draw the stuff and erase the shit.
         if (animation.t == currentTime) {
-          // this.shapeService.deleteshape(shape);
+          this.shapeService.deleteShape(shape.info.id);
         }
       } else if (animation.name == 'move') {
         // if (currentTime > animation.from.t && currentTime < animation.to.t) {
