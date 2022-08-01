@@ -50,7 +50,6 @@ export class AppComponent {
     // }, this.step);
   }
 
-  // TODO: MAKE THE RECTANGLE STAY AFTER IT HAS BEEN DRAWN.
   executeAnimation(shape, currentTime) {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
