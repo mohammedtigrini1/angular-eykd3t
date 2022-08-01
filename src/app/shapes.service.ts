@@ -2,13 +2,19 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ShapesService {
-  public shapeList: [] = [];
+  public shapes: any[] = [];
 
   constructor() {}
 
-  public addShape(shape, info) {}
+  public addShape(info) {
+    this.shapes.push(info);
+  }
 
-  public changeShapePosition(shapeIndex, info) {}
+  public changeShape(shapeIndex, info) {
+    this.shapes.map((i) => (i.id == shapeIndex ? (i = info) : i));
+  }
 
-  public deleteShape(shapeIndex) {}
+  public deleteShape(shapeIndex) {
+    this.shapes = this.shapes.filter((i) => i.id != shapeIndex);
+  }
 }
