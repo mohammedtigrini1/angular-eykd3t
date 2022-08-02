@@ -12,11 +12,53 @@
     "animations": [
       {
         "name": "appear",
-        "t": 1000
+        "t": 0
       },
       {
         "name": "disappear",
-        "t": 8000
+        "t": 10000
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 2,
+      "name": "triangle",
+      "coordinates": [
+        { "x": 150, "y": 100 },
+        { "x": 175, "y": 150 },
+        { "x": 175, "y": 100 }
+      ]
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      },
+      {
+        "name": "disappear",
+        "t": 10000
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 3,
+      "name": "triangle",
+      "coordinates": [
+        { "x": 175, "y": 150 },
+        { "x": 200, "y": 200 },
+        { "x": 200, "y": 200 }
+      ]
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      },
+      {
+        "name": "disappear",
+        "t": 10000
       }
     ]
   }
