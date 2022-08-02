@@ -41,10 +41,11 @@ export class AppComponent {
           return;
         }
       }
-      this.drawService.eraseCanvas();
       for (let shape of this.shapes) {
         this.executeAnimation(shape, currentTime);
       }
+
+      this.drawService.drawShapes();
       currentTime += this.step;
     }, this.step);
   }
@@ -69,7 +70,6 @@ export class AppComponent {
       //   }
       // }
     }
-    this.drawService.drawShapes();
   }
 
   // TODO: PLAY ANIMATION ON A LOOP.
