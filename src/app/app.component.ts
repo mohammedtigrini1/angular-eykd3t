@@ -15,8 +15,8 @@ export class AppComponent {
   @ViewChild('myCanvas')
   myCanvas: ElementRef<HTMLCanvasElement>;
 
-  public totalTime = 1000;
-  public step = 5;
+  public totalTime = 4000;
+  public step = 10;
   public shapes;
 
   constructor(
@@ -31,54 +31,54 @@ export class AppComponent {
   }
 
   animationLoop() {
-    console.log(this.shapes);
     let currentTime = 0;
-    // const interval = setInterval(() => {
-    //   if (currentTime > this.totalTime) {
-    //     if (this.isLooping) {
-    //       currentTime = 0; // reset the time.
-    //     } else {
-    //       clearInterval(interval);
-    //       return;
-    //     }
-    // }
-    // this.drawService.eraseCanvas();
-    // for(let shape of this.shapes) {
-    //   //   this.executeAnimation(shape, currentTime);
-    // }
-    //   currentTime += this.step;
-    // }, this.step);
+    const interval = setInterval(() => {
+      if (currentTime > this.totalTime) {
+        if (this.isLooping) {
+          currentTime = 0;
+        } else {
+          clearInterval(interval);
+          return;
+        }
+      }
+      this.drawService.eraseCanvas();
+      for (let shape of this.shapes) {
+        this.executeAnimation(shape, currentTime);
+      }
+      currentTime += this.step;
+    }, this.step);
   }
 
   executeAnimation(shape, currentTime) {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
+        console.log(animation.t);
         if (animation.t == currentTime) {
+          console.log('here');
           this.shapeService.addShape(shape.info);
         }
       } else if (animation.name == 'disappear') {
         if (animation.t == currentTime) {
           this.shapeService.deleteShape(shape.info.id);
         }
-      } else if (animation.name == 'move') {
-        if (currentTime > animation.from.t && currentTime < animation.to.t) {
-          //   const position = this.computePosition(animation, currentTime);
-          //   this.drawService.drawShapeInCanvas(animation.shape);
-          //   shape.info.id
-          //   this.shapeService.changeShape(shape.info)
-        }
       }
+      // else if (animation.name == 'move') {
+      //   if (currentTime > animation.from.t && currentTime < animation.to.t) {
+      //     //   const position = this.computePosition(animation, currentTime);
+      //     //   this.drawService.drawShapeInCanvas(animation.shape);
+      //     //   shape.info.id
+      //     //   this.shapeService.changeShape(shape.info)
+      //   }
+      // }
     }
     this.drawService.drawShapes();
   }
 
   // TODO: PLAY ANIMATION ON A LOOP.
-  private isLooping = true;
+  private isLooping = false;
   // if person taps on space bar, stop loop.
   @HostListener('window:keydown', ['$event'])
   spaceEvent(event: any) {
-    console.log('here');
-    console.log(event.code);
     if (event.code == 'Space') {
       this.isLooping = !this.isLooping;
     }
