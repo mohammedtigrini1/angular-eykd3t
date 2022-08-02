@@ -63,12 +63,12 @@ export class AppComponent {
           this.shapeService.deleteShape(shape.info.id);
         }
       } else if (animation.name == 'move') {
-        //   if (currentTime > animation.from.t && currentTime < animation.to.t) {
-        //     //   const position = this.computePosition(animation, currentTime);
-        //     //   this.drawService.drawShapeInCanvas(animation.shape);
-        //     //   shape.info.id
-        //     //   this.shapeService.changeShape(shape.info)
-        //   }
+        if (currentTime > animation.from.t && currentTime < animation.to.t) {
+          //     //   const position = this.computePosition(animation, currentTime);
+          //     //   this.drawService.drawShapeInCanvas(animation.shape);
+          //     //   shape.info.id
+          //     //   this.shapeService.changeShape(shape.info)
+        }
       }
     }
   }
