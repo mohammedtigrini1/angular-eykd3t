@@ -46,9 +46,9 @@ export class DrawService {
   drawTriangleInCanvas(info) {
     console.log(info);
     this._context.beginPath();
-    this._context.moveTo(info[0].x, info[0].y);
-    this._context.lineTo(info[1].x, info[1].y);
-    this._context.lineTo(info[2].x, info[2].y);
+    this._context.moveTo(info.coordinates[0].x, info.coordinates[0].y);
+    this._context.lineTo(info.coordinates[1].x, info.coordinates[1].y);
+    this._context.lineTo(info.coordinates[2].x, info.coordinates[2].y);
     this._context.fill();
   }
 }
