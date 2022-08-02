@@ -12,14 +12,11 @@ export class DrawService {
   set canvas(canvas) {
     this._canvas = canvas;
     this._context = this._canvas.nativeElement.getContext('2d');
-    console.log();
   }
 
   drawShapes() {
-    console.log('here', this.shapeService.shapes);
-    // this.eraseCanvas();
+    this.eraseCanvas();
     for (let shape of this.shapeService.shapes) {
-      console.log('drawing shapes');
       this.drawShapeInCanvas(shape);
     }
   }
@@ -48,6 +45,7 @@ export class DrawService {
   }
 
   drawTriangleInCanvas(info) {
+    this._context.fillStyle = '#000000';
     this._context.beginPath();
     this._context.moveTo(info.coordinates[0].x, info.coordinates[0].y);
     this._context.lineTo(info.coordinates[1].x, info.coordinates[1].y);

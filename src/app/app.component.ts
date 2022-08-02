@@ -15,7 +15,7 @@ export class AppComponent {
   @ViewChild('myCanvas')
   myCanvas: ElementRef<HTMLCanvasElement>;
 
-  public totalTime = 2000;
+  public totalTime = 10000;
   public step = 10;
   public shapes;
 
@@ -37,10 +37,12 @@ export class AppComponent {
         if (this.isLooping) {
           currentTime = 0;
         } else {
+          console.log('end');
           clearInterval(interval);
           return;
         }
       }
+
       for (let shape of this.shapes) {
         this.executeAnimation(shape, currentTime);
       }
