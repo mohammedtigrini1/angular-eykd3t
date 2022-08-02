@@ -52,9 +52,7 @@ export class AppComponent {
   executeAnimation(shape, currentTime) {
     for (let animation of shape.animations) {
       if (animation.name == 'appear') {
-        console.log(animation.t);
         if (animation.t == currentTime) {
-          console.log('here');
           this.shapeService.addShape(shape.info);
         }
       } else if (animation.name == 'disappear') {
