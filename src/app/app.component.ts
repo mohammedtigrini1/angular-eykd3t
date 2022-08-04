@@ -15,7 +15,7 @@ export class AppComponent {
   @ViewChild('myCanvas')
   myCanvas: ElementRef<HTMLCanvasElement>;
 
-  public totalTime = 10000;
+  public totalTime = 5000;
   public step = 10;
   public shapes;
 
@@ -43,11 +43,17 @@ export class AppComponent {
         }
       }
 
-      for (let shape of this.shapes) {
-        this.executeAnimation(shape, currentTime);
+      try {
+        for (let shape of this.shapes) {
+          this.executeAnimation(shape, currentTime);
+        }
+  
+        this.drawService.drawShapes();
+      } catch(err) {
+        console.error("ERROR OCCURED");
+        console.error(err);
       }
-
-      this.drawService.drawShapes();
+     
       currentTime += this.step;
     }, this.step);
   }
