@@ -29,6 +29,7 @@ export class AppComponent {
   ngAfterViewInit(): void {
     this.drawService.canvas = this.myCanvas;
     this.shapes = shapes.default;
+    this.shapeService.shapes = [];
     this.animationLoop();
   }
 
@@ -52,7 +53,6 @@ export class AppComponent {
 
         this.drawService.drawShapes();
       } catch (err) {
-        console.error('ERROR OCCURED');
         console.error(err);
       }
 
@@ -77,18 +77,17 @@ export class AppComponent {
               shape.info.coordinates;
           }
 
-          // Now make it work for the two
-          shape.info.coordinates = this.moveService.moveTriangle(
+          shape.info.coordinates = this.moveService.moveShape(
             shape.info.id,
             animation,
             currentTime
           );
 
+          this.shapeService.changeShape(shape.info);
+
           if (currentTime == animation.to.t) {
             delete this.moveService.originalCoordinates[shape.info.id];
           }
-
-          this.shapeService.changeShape(shape.info);
         }
       }
     }

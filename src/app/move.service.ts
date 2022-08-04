@@ -26,7 +26,24 @@ export class MoveService {
     };
   }
 
+  moveShape(shapeId, animation, currentTime) {
+    // TODO: Name of the shape to move I guess? Does this really have to know
+    // the name of the shape? It just deals with coordinates.
+
+    console.log(shapeId, animation, currentTime);
+    console.log(this.originalCoordinates[shapeId]);
+
+    if (Array.isArray(this.originalCoordinates[shapeId])) {
+      return this.moveTriangle(shapeId, animation, currentTime);
+    } else {
+      return this.moveRectangle(shapeId, animation, currentTime);
+    }
+  }
+
   moveTriangle(shapeId, animation, currentTime) {
+    console.log(shapeId, animation, currentTime);
+    console.log(this.originalCoordinates[shapeId]);
+
     const dif = this.computeCoordinatesDifferential(animation, currentTime);
 
     return [
@@ -46,14 +63,16 @@ export class MoveService {
   }
 
   // TODO: Finish
-  moveRectangle(shape, animation, currentTime) {
+  moveRectangle(shapeId, animation, currentTime) {
+    const dif = this.computeCoordinatesDifferential(animation, currentTime);
+
     return {
       x:
-        shape.x +
+        this.originalCoordinates[shapeId].x +
         this.computeCoordinatesDifferential(animation, currentTime)
           .xDifferential,
       y:
-        shape.y +
+        this.originalCoordinates[shapeId].y +
         this.computeCoordinatesDifferential(animation, currentTime)
           .yDifferential,
     };

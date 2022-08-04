@@ -5,8 +5,10 @@
       "name": "rectangle",
       "height": 10,
       "width": 10,
-      "x": 0,
-      "y": 0
+      "coordinates": {
+        "x": 0,
+        "y": 0
+      }
     },
     "animations": [
       {
