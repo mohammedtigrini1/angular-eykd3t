@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
+import { MoveService } from './move.service';
 import * as shapes from './pythagorian_theorem.json';
 import { ShapesService } from './shapes.service';
 // import * as animations from './test.json';
@@ -21,7 +22,8 @@ export class AppComponent {
 
   constructor(
     public drawService: DrawService,
-    public shapeService: ShapesService
+    public shapeService: ShapesService,
+    public moveService: MoveService
   ) {}
 
   ngAfterViewInit(): void {
@@ -70,6 +72,7 @@ export class AppComponent {
         }
       } else if (animation.name == 'move') {
         if (currentTime > animation.from.t && currentTime < animation.to.t) {
+          // this.moveService(shape, animation, currentTime)
           //   const position = this.computePosition(animation, currentTime);
           //   this.shapeService.changeShape(shape.info)
         }
