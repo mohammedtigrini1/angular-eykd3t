@@ -73,14 +73,20 @@ export class AppComponent {
       } else if (animation.name == 'move') {
         if (currentTime >= animation.from.t && currentTime <= animation.to.t) {
           if (currentTime == animation.from.t) {
-            this.moveService.originalCoordinates = shape.info.coordinates;
+            this.moveService.originalCoordinates[shape.info.id] =
+              shape.info.coordinates;
           }
 
+          // Now make it work for the two
           shape.info.coordinates = this.moveService.moveTriangle(
-            shape.info,
+            shape.info.id,
             animation,
             currentTime
           );
+
+          if (currentTime == animation.to.t) {
+            delete this.moveService.originalCoordinates[shape.info.id];
+          }
 
           this.shapeService.changeShape(shape.info);
         }

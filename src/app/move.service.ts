@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MoveService {
-  public originalCoordinates;
+  public originalCoordinates = {};
 
   constructor() {}
 
@@ -26,23 +26,21 @@ export class MoveService {
     };
   }
 
-  moveTriangle(shape, animation, currentTime) {
+  moveTriangle(shapeId, animation, currentTime) {
     const dif = this.computeCoordinatesDifferential(animation, currentTime);
-    // console.log(dif.xDifferential, dif.yDifferential);
-    // console.log(this.originalCoordinates);
 
     return [
       {
-        x: this.originalCoordinates[0].x + dif.xDifferential,
-        y: this.originalCoordinates[0].y + dif.yDifferential,
+        x: this.originalCoordinates[shapeId][0].x + dif.xDifferential,
+        y: this.originalCoordinates[shapeId][0].y + dif.yDifferential,
       },
       {
-        x: this.originalCoordinates[1].x + dif.xDifferential,
-        y: this.originalCoordinates[1].y + dif.yDifferential,
+        x: this.originalCoordinates[shapeId][1].x + dif.xDifferential,
+        y: this.originalCoordinates[shapeId][1].y + dif.yDifferential,
       },
       {
-        x: this.originalCoordinates[2].x + dif.xDifferential,
-        y: this.originalCoordinates[2].y + dif.yDifferential,
+        x: this.originalCoordinates[shapeId][2].x + dif.xDifferential,
+        y: this.originalCoordinates[shapeId][2].y + dif.yDifferential,
       },
     ];
   }
