@@ -49,13 +49,13 @@ export class AppComponent {
         for (let shape of this.shapes) {
           this.executeAnimation(shape, currentTime);
         }
-  
+
         this.drawService.drawShapes();
-      } catch(err) {
-        console.error("ERROR OCCURED");
+      } catch (err) {
+        console.error('ERROR OCCURED');
         console.error(err);
       }
-     
+
       currentTime += this.step;
     }, this.step);
   }
@@ -71,10 +71,18 @@ export class AppComponent {
           this.shapeService.deleteShape(shape.info.id);
         }
       } else if (animation.name == 'move') {
-        if (currentTime > animation.from.t && currentTime < animation.to.t) {
-          // this.moveService(shape, animation, currentTime)
-          //   const position = this.computePosition(animation, currentTime);
-          //   this.shapeService.changeShape(shape.info)
+        if (currentTime >= animation.from.t && currentTime <= animation.to.t) {
+          if (currentTime == animation.from.t) {
+            this.moveService.originalCoordinates = shape.info.coordinates;
+          }
+
+          shape.info.coordinates = this.moveService.moveTriangle(
+            shape.info,
+            animation,
+            currentTime
+          );
+
+          this.shapeService.changeShape(shape.info);
         }
       }
     }
