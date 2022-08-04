@@ -30,9 +30,6 @@ export class MoveService {
     // TODO: Name of the shape to move I guess? Does this really have to know
     // the name of the shape? It just deals with coordinates.
 
-    console.log(shapeId, animation, currentTime);
-    console.log(this.originalCoordinates[shapeId]);
-
     if (Array.isArray(this.originalCoordinates[shapeId])) {
       return this.moveTriangle(shapeId, animation, currentTime);
     } else {
@@ -41,9 +38,6 @@ export class MoveService {
   }
 
   moveTriangle(shapeId, animation, currentTime) {
-    console.log(shapeId, animation, currentTime);
-    console.log(this.originalCoordinates[shapeId]);
-
     const dif = this.computeCoordinatesDifferential(animation, currentTime);
 
     return [
