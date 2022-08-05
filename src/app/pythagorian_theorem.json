@@ -11,10 +11,7 @@
       "text": "Pythagorean theorem",
       "color": "#000000"
     },
-    "animations": [
-      { "name": "appear", "t": 100 },
-      { "name": "disappear", "t": 2000 }
-    ]
+    "animations": [{ "name": "appear", "t": 100 }]
   },
   {
     "info": {
@@ -28,10 +25,7 @@
       "text": "Proof",
       "color": "#555555"
     },
-    "animations": [
-      { "name": "appear", "t": 100 },
-      { "name": "disappear", "t": 2000 }
-    ]
+    "animations": [{ "name": "appear", "t": 100 }]
   },
 
   {
