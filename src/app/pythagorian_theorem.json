@@ -1,6 +1,19 @@
 [
   {
     "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
+        "x": 100,
+        "y": 50
+      },
+      "font": "20px Georgia",
+      "text": "Pythagorean theorem"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
+  },
+  {
+    "info": {
       "id": 1,
       "name": "triangle",
       "coordinates": [
@@ -29,7 +42,7 @@
     "animations": [
       {
         "name": "appear",
-        "t": 0
+        "t": 1000
       },
       {
         "name": "move",
@@ -59,7 +72,7 @@
     "animations": [
       {
         "name": "appear",
-        "t": 0
+        "t": 1000
       },
       {
         "name": "move",
@@ -89,7 +102,7 @@
     "animations": [
       {
         "name": "appear",
-        "t": 0
+        "t": 2000
       },
       {
         "name": "move",
