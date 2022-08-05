@@ -23,24 +23,11 @@
       },
       "font": "15px Georgia",
       "text": "Proof",
-      "color": "#000000"
+      "color": "#555555"
     },
     "animations": [{ "name": "appear", "t": 300 }]
   },
-  {
-    "info": {
-      "id": 0,
-      "name": "text",
-      "coordinates": {
-        "x": 100,
-        "y": 75
-      },
-      "font": "15px Georgia",
-      "text": "Proof",
-      "color": "#FF0000"
-    },
-    "animations": [{ "name": "appear", "t": 300 }]
-  },
+
   {
     "info": {
       "id": 0,
@@ -67,7 +54,7 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 800 }]
   },
   {
     "info": {
@@ -81,7 +68,7 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 600 }]
   },
   {
     "info": {
@@ -109,7 +96,7 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 700 }]
   },
   {
     "info": {
@@ -123,7 +110,7 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 600 }]
   },
   {
     "info": {
