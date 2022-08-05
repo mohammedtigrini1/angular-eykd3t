@@ -46,12 +46,26 @@
       "id": 0,
       "name": "text",
       "coordinates": {
-        "x": 90,
+        "x": 85,
         "y": 125
       },
       "font": "15px Georgia",
       "text": "a",
       "color": "#00FF34"
+    },
+    "animations": [{ "name": "appear", "t": 500 }]
+  },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
+        "x": 85,
+        "y": 220
+      },
+      "font": "15px Georgia",
+      "text": "b",
+      "color": "#FF0034"
     },
     "animations": [{ "name": "appear", "t": 0 }]
   },
@@ -74,6 +88,20 @@
       "id": 0,
       "name": "text",
       "coordinates": {
+        "x": 140,
+        "y": 95
+      },
+      "font": "15px Georgia",
+      "text": "b",
+      "color": "#FF0034"
+    },
+    "animations": [{ "name": "appear", "t": 500 }]
+  },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
         "x": 255,
         "y": 230
       },
@@ -88,12 +116,40 @@
       "id": 0,
       "name": "text",
       "coordinates": {
+        "x": 255,
+        "y": 150
+      },
+      "font": "15px Georgia",
+      "text": "b",
+      "color": "#FF0034"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
+  },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
         "x": 120,
-        "y": 260
+        "y": 265
       },
       "font": "15px Georgia",
       "text": "a",
       "color": "#00FF34"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
+  },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
+        "x": 200,
+        "y": 265
+      },
+      "font": "15px Georgia",
+      "text": "b",
+      "color": "#FF0034"
     },
     "animations": [{ "name": "appear", "t": 0 }]
   },
