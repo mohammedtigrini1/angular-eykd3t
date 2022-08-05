@@ -11,7 +11,10 @@
       "text": "Pythagorean theorem",
       "color": "#000000"
     },
-    "animations": [{ "name": "appear", "t": 100 }]
+    "animations": [
+      { "name": "appear", "t": 100 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -25,7 +28,10 @@
       "text": "Proof",
       "color": "#555555"
     },
-    "animations": [{ "name": "appear", "t": 100 }]
+    "animations": [
+      { "name": "appear", "t": 100 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
 
   {
@@ -40,7 +46,10 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 500 }]
+    "animations": [
+      { "name": "appear", "t": 500 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -54,7 +63,10 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 1700 }]
+    "animations": [
+      { "name": "appear", "t": 1700 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -68,7 +80,10 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 900 }]
+    "animations": [
+      { "name": "appear", "t": 900 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -82,7 +97,10 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 500 }]
+    "animations": [
+      { "name": "appear", "t": 500 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -96,7 +114,10 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 1300 }]
+    "animations": [
+      { "name": "appear", "t": 1300 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -110,7 +131,10 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 900 }]
+    "animations": [
+      { "name": "appear", "t": 900 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -124,7 +148,10 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 1700 }]
+    "animations": [
+      { "name": "appear", "t": 1700 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
@@ -138,7 +165,10 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 1300 }]
+    "animations": [
+      { "name": "appear", "t": 1300 },
+      { "name": "disappear", "t": 2000 }
+    ]
   },
   {
     "info": {
