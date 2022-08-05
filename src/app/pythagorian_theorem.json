@@ -10,7 +10,7 @@
       "font": "20px Georgia",
       "text": "Pythagorean theorem"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 100 }]
   },
   {
     "info": {
@@ -25,7 +25,7 @@
     "animations": [
       {
         "name": "appear",
-        "t": 0
+        "t": 250
       }
     ]
   },
@@ -42,19 +42,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 1000
+        "t": 500
       },
       {
         "name": "move",
         "from": {
           "x": 0,
           "y": 0,
-          "t": 2000
+          "t": 2500
         },
         "to": {
           "x": 0,
           "y": 50,
-          "t": 2500
+          "t": 3500
         }
       }
     ]
@@ -72,19 +72,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 1000
+        "t": 750
       },
       {
         "name": "move",
         "from": {
           "x": 150,
           "y": 250,
-          "t": 1000
+          "t": 1500
         },
         "to": {
           "x": 100,
           "y": 150,
-          "t": 1500
+          "t": 2500
         }
       }
     ]
@@ -102,19 +102,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 2000
+        "t": 1000
       },
       {
         "name": "move",
         "from": {
           "x": 0,
           "y": 0,
-          "t": 2000
+          "t": 2500
         },
         "to": {
           "x": 100,
           "y": 0,
-          "t": 2500
+          "t": 3500
         }
       }
     ]
