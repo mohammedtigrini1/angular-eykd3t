@@ -36,10 +36,9 @@ export class DrawService {
       this.drawRectangleInCanvas(shape);
     } else if (shape.name == 'triangle') {
       this.drawTriangleInCanvas(shape);
-    } else if (shape.name == 'test') {
+    } else if (shape.name == 'text') {
       this.drawTextInCanvas(shape);
     }
-    // this.drawTextInCanvas(null);
   }
 
   drawRectangleInCanvas(info) {
@@ -59,6 +58,6 @@ export class DrawService {
   drawTextInCanvas(info) {
     this._context.fillStyle = '#000000';
     this._context.font = info.font;
-    this._context.fillText(info.text, 100, 50);
+    this._context.fillText(info.text, info.coordinates.x, info.coordinates.y);
   }
 }
