@@ -8,7 +8,8 @@
         "y": 50
       },
       "font": "20px Georgia",
-      "text": "Pythagorean theorem"
+      "text": "Pythagorean theorem",
+      "color": "#000000"
     },
     "animations": [{ "name": "appear", "t": 100 }]
   },

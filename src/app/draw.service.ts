@@ -36,8 +36,10 @@ export class DrawService {
       this.drawRectangleInCanvas(shape);
     } else if (shape.name == 'triangle') {
       this.drawTriangleInCanvas(shape);
+    } else if (shape.name == 'test') {
+      this.drawTextInCanvas(shape);
     }
-    this.drawTextInCanvas(null);
+    // this.drawTextInCanvas(null);
   }
 
   drawRectangleInCanvas(info) {
@@ -56,8 +58,7 @@ export class DrawService {
 
   drawTextInCanvas(info) {
     this._context.fillStyle = '#000000';
-    this._context.font = '20px Georgia';
-    this._context.fillText('Pythagorean theorem', 100, 50);
-    this._context.fillText('Example', 100, 80);
+    this._context.font = info.font;
+    this._context.fillText(info.text, 100, 50);
   }
 }
