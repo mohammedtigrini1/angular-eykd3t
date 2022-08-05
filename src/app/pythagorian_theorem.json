@@ -25,7 +25,7 @@
       "text": "Proof",
       "color": "#555555"
     },
-    "animations": [{ "name": "appear", "t": 300 }]
+    "animations": [{ "name": "appear", "t": 100 }]
   },
 
   {
@@ -54,7 +54,7 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 800 }]
+    "animations": [{ "name": "appear", "t": 1700 }]
   },
   {
     "info": {
@@ -68,7 +68,7 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 600 }]
+    "animations": [{ "name": "appear", "t": 900 }]
   },
   {
     "info": {
@@ -96,7 +96,7 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 700 }]
+    "animations": [{ "name": "appear", "t": 1300 }]
   },
   {
     "info": {
@@ -110,7 +110,7 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 600 }]
+    "animations": [{ "name": "appear", "t": 900 }]
   },
   {
     "info": {
@@ -124,7 +124,7 @@
       "text": "a",
       "color": "#00FF34"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 1700 }]
   },
   {
     "info": {
@@ -138,7 +138,7 @@
       "text": "b",
       "color": "#FF0034"
     },
-    "animations": [{ "name": "appear", "t": 0 }]
+    "animations": [{ "name": "appear", "t": 1300 }]
   },
   {
     "info": {
@@ -170,19 +170,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 600
+        "t": 900
       },
       {
         "name": "move",
         "from": {
           "x": 0,
           "y": 0,
-          "t": 2500
+          "t": 3000
         },
         "to": {
           "x": 0,
           "y": 50,
-          "t": 3500
+          "t": 4000
         }
       }
     ]
@@ -200,19 +200,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 700
+        "t": 1300
       },
       {
         "name": "move",
         "from": {
           "x": 150,
           "y": 250,
-          "t": 1500
+          "t": 2000
         },
         "to": {
           "x": 100,
           "y": 150,
-          "t": 2500
+          "t": 3000
         }
       }
     ]
@@ -230,19 +230,19 @@
     "animations": [
       {
         "name": "appear",
-        "t": 800
+        "t": 1700
       },
       {
         "name": "move",
         "from": {
           "x": 0,
           "y": 0,
-          "t": 2500
+          "t": 3000
         },
         "to": {
           "x": 100,
           "y": 0,
-          "t": 3500
+          "t": 4000
         }
       }
     ]
