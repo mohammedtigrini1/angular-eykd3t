@@ -72,7 +72,7 @@
 
   {
     "info": {
-      "id": 1,
+      "id": 111,
       "name": "triangle",
       "coordinates": [
         { "x": 100, "y": 100 },
@@ -89,7 +89,7 @@
   },
   {
     "info": {
-      "id": 2,
+      "id": 222,
       "name": "triangle",
       "coordinates": [
         { "x": 200, "y": 100 },
@@ -119,7 +119,7 @@
   },
   {
     "info": {
-      "id": 3,
+      "id": 333,
       "name": "triangle",
       "coordinates": [
         { "x": 250, "y": 200 },
