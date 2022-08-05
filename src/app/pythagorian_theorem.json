@@ -1,7 +1,7 @@
 [
   {
     "info": {
-      "id": 0,
+      "id": 90,
       "name": "text",
       "coordinates": {
         "x": 100,
@@ -15,7 +15,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 1,
       "name": "text",
       "coordinates": {
         "x": 100,
@@ -30,7 +30,7 @@
 
   {
     "info": {
-      "id": 0,
+      "id": 2,
       "name": "text",
       "coordinates": {
         "x": 85,
@@ -47,7 +47,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 3,
       "name": "text",
       "coordinates": {
         "x": 85,
@@ -64,7 +64,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 4,
       "name": "text",
       "coordinates": {
         "x": 225,
@@ -81,7 +81,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 5,
       "name": "text",
       "coordinates": {
         "x": 140,
@@ -98,7 +98,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 6,
       "name": "text",
       "coordinates": {
         "x": 255,
@@ -115,7 +115,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 7,
       "name": "text",
       "coordinates": {
         "x": 255,
@@ -132,7 +132,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 8,
       "name": "text",
       "coordinates": {
         "x": 120,
@@ -149,7 +149,7 @@
   },
   {
     "info": {
-      "id": 0,
+      "id": 9,
       "name": "text",
       "coordinates": {
         "x": 200,
@@ -243,7 +243,7 @@
   },
   {
     "info": {
-      "id": 4,
+      "id": 444,
       "name": "triangle",
       "coordinates": [
         { "x": 100, "y": 150 },
