@@ -166,6 +166,51 @@
   },
   {
     "info": {
+      "id": 10,
+      "name": "text",
+      "coordinates": {
+        "x": 140,
+        "y": 210
+      },
+      "font": "22px Georgia",
+      "text": "b²",
+      "color": "#FF0034"
+    },
+    "animations": [{ "name": "appear", "t": 4500 }]
+  },
+  {
+    "info": {
+      "id": 11,
+      "name": "text",
+      "coordinates": {
+        "x": 220,
+        "y": 130
+      },
+      "font": "22px Georgia",
+      "text": "a²",
+      "color": "#00FF34"
+    },
+    "animations": [{ "name": "appear", "t": 4500 }]
+  },
+  {
+    "info": {
+      "id": 12,
+      "name": "text",
+      "coordinates": {
+        "x": 165,
+        "y": 185
+      },
+      "font": "22px Georgia",
+      "text": "c²",
+      "color": "#EC42F5"
+    },
+    "animations": [
+      { "name": "appear", "t": 2000 },
+      { "name": "disappear", "t": 3000 }
+    ]
+  },
+  {
+    "info": {
       "id": 111,
       "name": "triangle",
       "coordinates": [
