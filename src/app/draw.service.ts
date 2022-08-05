@@ -56,7 +56,7 @@ export class DrawService {
   }
 
   drawTextInCanvas(info) {
-    this._context.fillStyle = '#000000';
+    this._context.fillStyle = info.color;
     this._context.font = info.font;
     this._context.fillText(info.text, info.coordinates.x, info.coordinates.y);
   }

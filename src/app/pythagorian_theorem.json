@@ -32,15 +32,44 @@
       "id": 0,
       "name": "text",
       "coordinates": {
+        "x": 100,
+        "y": 75
+      },
+      "font": "15px Georgia",
+      "text": "Proof",
+      "color": "#FF0000"
+    },
+    "animations": [{ "name": "appear", "t": 300 }]
+  },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
         "x": 90,
         "y": 125
       },
       "font": "15px Georgia",
       "text": "c",
-      "color": "#000000"
+      "color": "#00FF34"
     },
     "animations": [{ "name": "appear", "t": 0 }]
   },
+  {
+    "info": {
+      "id": 0,
+      "name": "text",
+      "coordinates": {
+        "x": 250,
+        "y": 125
+      },
+      "font": "15px Georgia",
+      "text": "c",
+      "color": "#00FF34"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
+  },
+
   {
     "info": {
       "id": 1,
