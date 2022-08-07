@@ -33,7 +33,6 @@ export class DrawService {
 
   drawShapeInCanvas(shape) {
     if (shape.name == 'rectangle') {
-      console.log('here');
       this.drawRectangleInCanvas(shape);
     } else if (shape.name == 'triangle') {
       this.drawTriangleInCanvas(shape);
