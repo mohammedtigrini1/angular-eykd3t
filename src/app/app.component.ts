@@ -16,7 +16,7 @@ export class AppComponent {
   @ViewChild('myCanvas')
   myCanvas: ElementRef<HTMLCanvasElement>;
 
-  public totalTime = 5000;
+  public totalTime = 6000;
   public step = 10;
   public shapes;
 
