@@ -89,7 +89,7 @@ export class DrawService {
     );
 
     if (info.style.name == 'fill') {
-      this._context.fillStyle = info.color;
+      this._context.fillStyle = info.style.color;
       this._context.fill();
     } else if (info.style.name == 'stroke') {
       this._context.stroke();
