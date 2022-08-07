@@ -44,8 +44,22 @@ export class DrawService {
 
   drawRectangleInCanvas(info) {
     this._context.fillStyle = '#FF0000';
-    console.log(info);
-    this._context.fillRect(info.coordinates.x, info.coordinates.y, info.height, info.width);
+    if (info.style.name == 'fill') {
+      this._context.fillRect(
+        info.coordinates.x,
+        info.coordinates.y,
+        info.height,
+        info.width
+      );
+    } else if (info.style.name == 'stroke') {
+      this._context.lineWidth = info.style.lineWidth;
+      this._context.strokeRect(
+        info.coordinates.x,
+        info.coordinates.y,
+        info.height,
+        info.width
+      );
+    }
   }
 
   drawTriangleInCanvas(info) {
