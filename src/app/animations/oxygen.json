@@ -4,6 +4,9 @@
       "id": 1,
       "name": "circle",
       "radius": 20,
+      "style": {
+        "name": "stroke"
+      },
       "coordinates": {
         "x": 70,
         "y": 70
