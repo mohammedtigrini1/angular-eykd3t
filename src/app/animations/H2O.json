@@ -3,10 +3,10 @@
     "info": {
       "id": 1,
       "name": "circle",
-      "radius": 50,
+      "radius": 20,
       "coordinates": {
-        "x": 10,
-        "y": 10
+        "x": 40,
+        "y": 40
       }
     },
     "animations": [
@@ -15,5 +15,19 @@
         "t": 0
       }
     ]
+  },
+  {
+    "info": {
+      "id": 90,
+      "name": "text",
+      "coordinates": {
+        "x": 100,
+        "y": 50
+      },
+      "font": "20px Georgia",
+      "text": "(-) O",
+      "color": "#000000"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
   }
 ]

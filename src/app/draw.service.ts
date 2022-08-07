@@ -39,7 +39,7 @@ export class DrawService {
     } else if (shape.name == 'text') {
       this.drawTextInCanvas(shape);
     } else if (shape.name == 'circle') {
-      this.drawTextInCanvas(shape);
+      this.drawCircleInCanvas(shape);
     }
   }
 
