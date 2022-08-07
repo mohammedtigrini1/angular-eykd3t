@@ -196,5 +196,159 @@
         "t": 0
       }
     ]
+  },
+  {
+    "info": {
+      "id": 10,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 11,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 100,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 12,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 145,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 13,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 190,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 14,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 235,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 15,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 280,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 16,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 325,
+        "y": 55
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
   }
 ]
