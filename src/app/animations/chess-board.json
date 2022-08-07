@@ -350,5 +350,181 @@
         "t": 0
       }
     ]
+  },
+  {
+    "info": {
+      "id": 17,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 10,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 18,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 19,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 20,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 145,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 21,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 190,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 22,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 235,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 23,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 280,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 24,
+      "name": "rectangle",
+      "height": 45,
+      "width": 45,
+      "style": {
+        "name": "stroke",
+        "lineWidth": 2
+      },
+      "coordinates": {
+        "x": 325,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
   }
 ]
