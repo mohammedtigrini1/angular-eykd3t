@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import * as shapes from './pythagorian_theorem.json';
+import * as shapes from './animations/chess-board';
 import { ShapesService } from './shapes.service';
 // import * as animations from './test.json';
 
