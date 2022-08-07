@@ -1,0 +1,33 @@
+[
+  {
+    "info": {
+      "id": 1,
+      "name": "circle",
+      "radius": 17,
+      "coordinates": {
+        "x": 70,
+        "y": 70
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": 2,
+      "name": "text",
+      "coordinates": {
+        "x": 60,
+        "y": 75
+      },
+      "font": "9px Georgia",
+      "text": "(+) H",
+      "color": "#000000"
+    },
+    "animations": [{ "name": "appear", "t": 0 }]
+  }
+]
