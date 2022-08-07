@@ -28,7 +28,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
+        "name": "fill",
+        "color": "#FF0000",
         "lineWidth": 2
       },
       "coordinates": {

@@ -42,8 +42,8 @@ export class DrawService {
   }
 
   drawRectangleInCanvas(info) {
-    this._context.fillStyle = '#FF0000';
     if (info.style.name == 'fill') {
+      this._context.fillStyle = info.color;
       this._context.fillRect(
         info.coordinates.x,
         info.coordinates.y,
