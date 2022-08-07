@@ -3,13 +3,18 @@
     "info": {
       "id": 1,
       "name": "rectangle",
-      "height": 10,
-      "width": 10,
+      "height": 20,
+      "width": 20,
       "coordinates": {
-        "x": 0,
-        "y": 0
+        "x": 20,
+        "y": 20
       }
     },
-    "animations": []
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      }
+    ]
   }
 ]
