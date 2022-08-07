@@ -7,7 +7,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 0
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 10,
@@ -33,7 +33,7 @@
       },
       "coordinates": {
         "x": 55,
-        "y": 10
+        "y": 9
       }
     },
     "animations": [
@@ -51,7 +51,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 100,
@@ -73,11 +73,11 @@
       "width": 45,
       "style": {
         "name": "fill",
-        "color": "#FF0000"
+        "color": "#000000"
       },
       "coordinates": {
         "x": 145,
-        "y": 10
+        "y": 9
       }
     },
     "animations": [
@@ -95,7 +95,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 190,
@@ -116,12 +116,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 235,
-        "y": 10
+        "y": 9
       }
     },
     "animations": [
@@ -139,7 +139,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 280,
@@ -160,12 +160,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 325,
-        "y": 10
+        "x": 326,
+        "y": 9
       }
     },
     "animations": [
@@ -182,11 +182,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 10,
+        "x": 9,
         "y": 55
       }
     },
@@ -205,7 +205,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 55,
@@ -226,8 +226,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 100,
@@ -249,7 +249,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 145,
@@ -270,8 +270,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 190,
@@ -293,7 +293,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 235,
@@ -314,8 +314,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 280,
@@ -337,7 +337,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 325,
@@ -359,7 +359,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 10,
@@ -380,8 +380,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 55,
@@ -403,7 +403,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 100,
@@ -424,8 +424,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 145,
@@ -447,7 +447,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 190,
@@ -468,8 +468,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 235,
@@ -491,7 +491,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 280,
@@ -512,11 +512,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 325,
+        "x": 326,
         "y": 100
       }
     },
@@ -534,11 +534,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 10,
+        "x": 9,
         "y": 145
       }
     },
@@ -557,7 +557,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 55,
@@ -578,8 +578,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 100,
@@ -601,7 +601,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 145,
@@ -622,8 +622,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 190,
@@ -645,7 +645,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 235,
@@ -666,8 +666,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 280,
@@ -689,7 +689,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 325,
@@ -711,7 +711,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 10,
@@ -732,8 +732,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 55,
@@ -755,7 +755,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 100,
@@ -776,8 +776,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 145,
@@ -799,7 +799,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 190,
@@ -820,8 +820,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 235,
@@ -843,7 +843,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 280,
@@ -864,11 +864,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 325,
+        "x": 326,
         "y": 190
       }
     },
@@ -886,11 +886,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 10,
+        "x": 9,
         "y": 235
       }
     },
@@ -909,7 +909,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 55,
@@ -930,8 +930,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 100,
@@ -953,7 +953,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 145,
@@ -974,8 +974,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 190,
@@ -997,7 +997,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 235,
@@ -1018,8 +1018,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 280,
@@ -1041,7 +1041,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 325,
@@ -1063,7 +1063,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 10,
@@ -1084,8 +1084,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 55,
@@ -1107,7 +1107,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 100,
@@ -1128,8 +1128,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 145,
@@ -1151,7 +1151,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 190,
@@ -1172,8 +1172,8 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 235,
@@ -1195,7 +1195,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 280,
@@ -1216,11 +1216,11 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 325,
+        "x": 326,
         "y": 280
       }
     },
@@ -1238,12 +1238,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
-        "x": 10,
-        "y": 325
+        "x": 9,
+        "y": 326
       }
     },
     "animations": [
@@ -1261,7 +1261,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 55,
@@ -1282,12 +1282,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 100,
-        "y": 325
+        "y": 326
       }
     },
     "animations": [
@@ -1305,7 +1305,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 145,
@@ -1326,12 +1326,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 190,
-        "y": 325
+        "y": 326
       }
     },
     "animations": [
@@ -1349,7 +1349,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 235,
@@ -1370,12 +1370,12 @@
       "height": 45,
       "width": 45,
       "style": {
-        "name": "stroke",
-        "lineWidth": 2
+        "name": "fill",
+        "color": "#000000"
       },
       "coordinates": {
         "x": 280,
-        "y": 325
+        "y": 326
       }
     },
     "animations": [
@@ -1393,7 +1393,7 @@
       "width": 45,
       "style": {
         "name": "stroke",
-        "lineWidth": 2
+        "lineWidth": 1
       },
       "coordinates": {
         "x": 325,
