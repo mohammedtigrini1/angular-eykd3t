@@ -4,6 +4,10 @@
       "id": 1,
       "name": "circle",
       "radius": 17,
+      "style": {
+        "name": "fill",
+        "color": "#000000"
+      },
       "coordinates": {
         "x": 70,
         "y": 70

@@ -87,6 +87,12 @@ export class DrawService {
       0,
       2 * Math.PI
     );
-    this._context.stroke();
+
+    if (info.style.name == 'fill') {
+      this._context.fillStyle = info.color;
+      this._context.fill();
+    } else if (info.style.name == 'stroke') {
+      this._context.stroke();
+    }
   }
 }
