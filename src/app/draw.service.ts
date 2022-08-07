@@ -38,6 +38,8 @@ export class DrawService {
       this.drawTriangleInCanvas(shape);
     } else if (shape.name == 'text') {
       this.drawTextInCanvas(shape);
+    } else if (shape.name == 'circle') {
+      this.drawTextInCanvas(shape);
     }
   }
 
@@ -74,5 +76,17 @@ export class DrawService {
     this._context.fillStyle = info.color;
     this._context.font = info.font;
     this._context.fillText(info.text, info.coordinates.x, info.coordinates.y);
+  }
+
+  drawCircleInCanvas(info) {
+    this._context.beginPath();
+    this._context.arc(
+      info.coordinates.x,
+      info.coordinates.y,
+      info.radius,
+      0,
+      2 * Math.PI
+    );
+    this._context.stroke();
   }
 }

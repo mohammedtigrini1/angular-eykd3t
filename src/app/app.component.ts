@@ -89,6 +89,8 @@ export class AppComponent {
             delete this.moveService.originalCoordinates[shape.info.id];
           }
         }
+      } else if (animation.name == 'rotate') {
+        // TODO
       }
     }
   }
