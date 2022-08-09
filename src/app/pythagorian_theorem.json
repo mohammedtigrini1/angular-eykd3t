@@ -1,7 +1,6 @@
 [
   {
     "info": {
-      "id": 90,
       "name": "text",
       "coordinates": {
         "x": 100,
@@ -15,7 +14,6 @@
   },
   {
     "info": {
-      "id": 1,
       "name": "text",
       "coordinates": {
         "x": 100,
@@ -30,7 +28,6 @@
 
   {
     "info": {
-      "id": 2,
       "name": "text",
       "coordinates": {
         "x": 85,
@@ -47,7 +44,6 @@
   },
   {
     "info": {
-      "id": 3,
       "name": "text",
       "coordinates": {
         "x": 85,
@@ -64,7 +60,6 @@
   },
   {
     "info": {
-      "id": 4,
       "name": "text",
       "coordinates": {
         "x": 225,
@@ -81,7 +76,6 @@
   },
   {
     "info": {
-      "id": 5,
       "name": "text",
       "coordinates": {
         "x": 140,
@@ -98,7 +92,6 @@
   },
   {
     "info": {
-      "id": 6,
       "name": "text",
       "coordinates": {
         "x": 255,
@@ -115,7 +108,6 @@
   },
   {
     "info": {
-      "id": 7,
       "name": "text",
       "coordinates": {
         "x": 255,
@@ -132,7 +124,6 @@
   },
   {
     "info": {
-      "id": 8,
       "name": "text",
       "coordinates": {
         "x": 120,
@@ -149,7 +140,6 @@
   },
   {
     "info": {
-      "id": 9,
       "name": "text",
       "coordinates": {
         "x": 200,
@@ -166,7 +156,6 @@
   },
   {
     "info": {
-      "id": 10,
       "name": "text",
       "coordinates": {
         "x": 140,
@@ -180,7 +169,6 @@
   },
   {
     "info": {
-      "id": 11,
       "name": "text",
       "coordinates": {
         "x": 220,
@@ -194,7 +182,6 @@
   },
   {
     "info": {
-      "id": 12,
       "name": "text",
       "coordinates": {
         "x": 165,
@@ -211,7 +198,6 @@
   },
   {
     "info": {
-      "id": 111,
       "name": "triangle",
       "coordinates": [
         { "x": 100, "y": 100 },
@@ -228,7 +214,6 @@
   },
   {
     "info": {
-      "id": 222,
       "name": "triangle",
       "coordinates": [
         { "x": 200, "y": 100 },
@@ -258,7 +243,6 @@
   },
   {
     "info": {
-      "id": 333,
       "name": "triangle",
       "coordinates": [
         { "x": 250, "y": 200 },
@@ -288,7 +272,6 @@
   },
   {
     "info": {
-      "id": 444,
       "name": "triangle",
       "coordinates": [
         { "x": 100, "y": 150 },

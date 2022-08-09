@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import * as shapes from './animations/hydrogen.json';
+import * as shapes from './pythagorian_theorem';
 import { ShapesService } from './shapes.service';
 // import * as animations from './test.json';
 
@@ -29,6 +29,9 @@ export class AppComponent {
   ngAfterViewInit(): void {
     this.drawService.canvas = this.myCanvas;
     this.shapes = shapes.default;
+
+    // Giving an id to the shapes.
+    this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
     this.animationLoop();
   }
@@ -92,6 +95,16 @@ export class AppComponent {
       } else if (animation.name == 'rotate') {
         // TODO
       }
+    }
+  }
+
+  findShapesRecursively(shapes) {
+    for (let shape of shapes) {
+      if (shape.isRecursive) {
+        this.findShapesRecursively(shape.shapes);
+      }
+
+      return shape;
     }
   }
 

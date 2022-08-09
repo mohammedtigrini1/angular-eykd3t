@@ -12,3 +12,4 @@ TODO:
 - Plus besoin de donner un id manuellement. Faire en sorte que ce soit l'index
   du shit.
 - Rotate animation
+- How to override the coordinates of the animation?
