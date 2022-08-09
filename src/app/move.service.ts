@@ -56,7 +56,7 @@ export class MoveService {
     ];
   }
 
-  // TODO: Finish
+  // TODO: FINISH
   moveRectangle(shapeId, animation, currentTime) {
     const dif = this.computeCoordinatesDifferential(animation, currentTime);
 
