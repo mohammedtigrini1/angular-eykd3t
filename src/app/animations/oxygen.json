@@ -1,7 +1,6 @@
 [
   {
     "info": {
-      "id": 1,
       "name": "circle",
       "radius": 20,
       "style": {
@@ -22,7 +21,6 @@
   },
   {
     "info": {
-      "id": 2,
       "name": "text",
       "coordinates": {
         "x": 60,

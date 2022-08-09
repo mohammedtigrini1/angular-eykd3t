@@ -1,23 +1,29 @@
 [
   {
-    "shape": "oxygen.json",
-    "coordinates": {
-      "x": 20,
-      "y": 20
+    "info": {
+      "shape": "oxygen.json",
+      "coordinates": {
+        "x": 20,
+        "y": 20
+      }
     }
   },
   {
-    "shape": "hydrogen.json",
-    "coordinates": {
-      "x": 20,
-      "y": 20
+    "info": {
+      "shape": "hydrogen.json",
+      "coordinates": {
+        "x": 20,
+        "y": 20
+      }
     }
   },
   {
-    "shape": "hydrogen.json",
-    "coordinates": {
-      "x": 20,
-      "y": 20
+    "info": {
+      "shape": "hydrogen.json",
+      "coordinates": {
+        "x": 20,
+        "y": 20
+      }
     }
   }
 ]
