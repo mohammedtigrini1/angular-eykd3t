@@ -22,13 +22,13 @@
   {
     "info": {
       "name": "text",
+      "font": "10px Georgia",
+      "text": "(-) O",
+      "color": "#000000",
       "coordinates": {
         "x": 60,
         "y": 80
-      },
-      "font": "10px Georgia",
-      "text": "(-) O",
-      "color": "#000000"
+      }
     },
     "animations": [{ "name": "appear", "t": 0 }]
   }
