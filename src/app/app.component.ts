@@ -33,7 +33,24 @@ export class AppComponent {
     // Giving an id to the shapes.
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
+    var chunks = [];
+    var canvas_stream = this.myCanvas.nativeElement.captureStream(60); // fps
+    // // Create media recorder from canvas stream
+    const media_recorder = new MediaRecorder(canvas_stream, {
+      mimeType: 'video/webm; codecs=vp9',
+    });
+    // // Record data in chunks array when data is available
+    media_recorder.ondataavailable = (evt) => {
+      chunks.push(evt.data);
+    };
+    // Provide recorded data when recording stops
+    media_recorder.onstop = () => {
+      this.on_media_recorder_stop(chunks);
+    };
+    // // Start recording using a 1s timeslice [ie data is made available every 1s)
+    media_recorder.start(1000);
     this.animationLoop();
+    media_recorder.stop();
   }
 
   animationLoop() {
@@ -116,5 +133,30 @@ export class AppComponent {
     if (event.code == 'Space') {
       this.isLooping = !this.isLooping;
     }
+  }
+
+  on_media_recorder_stop(chunks) {
+    console.log('here', chunks);
+    // this.media_recorder = null;
+
+    // Gather chunks of video data into a blob and create an object URL
+    var blob = new Blob(chunks, { type: 'video/webm' });
+    const recording_url = URL.createObjectURL(blob);
+
+    // Attach the object URL to an <a> element, setting the download file name
+    let a = document.createElement('a');
+    // a.style = "display: none;";
+    a.href = recording_url;
+    a.download = 'video.webm';
+    document.body.appendChild(a);
+
+    // Trigger the file download
+    a.click();
+
+    setTimeout(() => {
+      // Clean up - see https://stackoverflow.com/a/48968694 for why it is in a timeout
+      URL.revokeObjectURL(recording_url);
+      document.body.removeChild(a);
+    }, 0);
   }
 }
