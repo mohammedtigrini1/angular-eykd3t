@@ -117,6 +117,8 @@ export class AppComponent {
         // TODO
       } else if (animation.name == 'resize') {
         // TODO
+      } else if (animation.name == 'changeColor') {
+        // TODO
       }
     }
   }
