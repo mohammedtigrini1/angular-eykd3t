@@ -14,3 +14,4 @@ TODO:
 - Rotate animation
 - How to override the coordinates of the animation?
 - Export logic for creating video.
+- Move animations.

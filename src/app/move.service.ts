@@ -72,5 +72,11 @@ export class MoveService {
     };
   }
 
-  moveText(shapeId, animation, currentime) {}
+  moveCircle(shapeId, animation, currentTime) {
+    // TODO
+  }
+
+  moveText(shapeId, animation, currentime) {
+    // TODO
+  }
 }
