@@ -115,6 +115,8 @@ export class AppComponent {
         }
       } else if (animation.name == 'rotate') {
         // TODO
+      } else if (animation.name == 'resize') {
+        // TODO
       }
     }
   }
