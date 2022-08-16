@@ -33,28 +33,28 @@ export class AppComponent {
     // Giving an id to the shapes.
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
-    var chunks = [];
-    var canvas_stream = this.myCanvas.nativeElement.captureStream(30); // fps
+    // var chunks = [];
+    // var canvas_stream = this.myCanvas.nativeElement.captureStream(30); // fps
     // // Create media recorder from canvas stream
-    const media_recorder = new MediaRecorder(canvas_stream, {
-      videoBitsPerSecond: 2500000,
-      mimeType: 'video/webm',
-    });
-    // // Record data in chunks array when data is available
-    media_recorder.ondataavailable = (evt) => {
-      chunks.push(evt.data);
-    };
-    // Provide recorded data when recording stops
-    media_recorder.onstop = () => {
-      this.on_media_recorder_stop(chunks);
-    };
-    // // Start recording using a 1s timeslice [ie data is made available every 1s)
-    media_recorder.start(0);
+    // const media_recorder = new MediaRecorder(canvas_stream, {
+    //   videoBitsPerSecond: 2500000,
+    //   mimeType: 'video/webm',
+    // });
+    // // // Record data in chunks array when data is available
+    // media_recorder.ondataavailable = (evt) => {
+    //   chunks.push(evt.data);
+    // };
+    // // Provide recorded data when recording stops
+    // media_recorder.onstop = () => {
+    //   this.on_media_recorder_stop(chunks);
+    // };
+    // // // Start recording using a 1s timeslice [ie data is made available every 1s)
+    // media_recorder.start(0);
     await this.animationLoop();
-    console.log('FINISHED');
-    setTimeout(() => {
-      media_recorder.stop();
-    }, 8000);
+    // console.log('FINISHED');
+    // setTimeout(() => {
+    //   media_recorder.stop();
+    // }, 8000);
   }
 
   animationLoop() {

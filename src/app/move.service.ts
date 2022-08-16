@@ -71,4 +71,6 @@ export class MoveService {
           .yDifferential,
     };
   }
+
+  moveText(shapeId, animation, currentime) {}
 }
