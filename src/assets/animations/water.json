@@ -4,9 +4,10 @@
       "name": "composite",
       "file": "H2O.json",
       "coordinates": {
-        "x": 60,
-        "y": 60
-      }
+        "x": 0,
+        "y": 0
+      },
+      anima
     }
   },
   {
@@ -14,8 +15,8 @@
       "name": "composite",
       "file": "H2O.json",
       "coordinates": {
-        "x": 100,
-        "y": 100
+        "x": 60,
+        "y": 60
       }
     }
   }

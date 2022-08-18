@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import * as shapes from '../assets/animations/H2O';
 
 @Injectable()
 export class InitService {
@@ -10,6 +9,7 @@ export class InitService {
 
   public async getShapeArray(shapes: any[]) {
     await this.constructShapeArray(shapes);
+    this.shapes = this.shapes.filter((shape) => shape.info.name != 'composite');
     return this.shapes;
   }
 
@@ -19,6 +19,20 @@ export class InitService {
     animations?: any[]
   ) {
     for (let shape of shapes) {
+      if (coordinates) {
+        shape.info.coordinates.x += coordinates.x;
+        shape.info.coordinates.y += coordinates.y;
+      }
+
+      if (animations) {
+        if (shape.animations != undefined) {
+          shape.animations = [];
+        }
+        for (let animation of animations) {
+          shape.animations.push(animation);
+        }
+      }
+
       if (shape.info.name == 'composite') {
         let children = await this.getShape(shape.info.file);
         await this.constructShapeArray(
@@ -28,24 +42,7 @@ export class InitService {
         );
       }
 
-      if (coordinates) {
-        shape.info.coordinates.x += coordinates.x;
-        shape.info.coordinates.y += coordinates.y;
-      }
-
-      if (animations) {
-        if (!shape.animations) {
-          shape.animations = [];
-        }
-        animations.map((an) => {
-          shape.animations.push(an);
-        });
-      }
-
-      // Only push the animations the shapes that are not composite.
-      if (shape.info.name != 'composite') {
-        this.shapes.push(shape);
-      }
+      this.shapes.push(shape);
     }
   }
 
