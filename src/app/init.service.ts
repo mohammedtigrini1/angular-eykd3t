@@ -28,6 +28,8 @@ export class InitService {
         if (shape.animations != undefined) {
           shape.animations = [];
         }
+
+        console.log(animations);
         for (let animation of animations) {
           shape.animations.push(animation);
         }
@@ -35,6 +37,7 @@ export class InitService {
 
       if (shape.info.name == 'composite') {
         let children = await this.getShape(shape.info.file);
+        console.log(shape.info.name, shape.info.file);
         await this.constructShapeArray(
           children,
           shape.info.coordinates,
