@@ -6,44 +6,58 @@ import * as shapes from '../assets/animations/H2O';
 export class InitService {
   public shapes: any[] = [];
 
-  constructor(private http: HttpClient) {
-    this.constructShapeArray(shapes.default);
-    console.log(this.shapes);
-    this.getDataHttp('assets/animations/oxygen.json').subscribe((data) => {
-      console.log(data);
-    });
+  constructor(private http: HttpClient) {}
+
+  public async getShapeArray(shapes: any[]) {
+    await this.constructShapeArray(shapes);
+    return this.shapes;
   }
 
-  public constructShapeArray(
+  public async constructShapeArray(
     shapes: any[],
     coordinates?: { x: number; y: number },
     animations?: any[]
   ) {
     for (let shape of shapes) {
-      if (shape.subshapes) {
+      if (shape.info.name == 'composite') {
+        let children = await this.getShape(shape.info.file);
         this.constructShapeArray(
-          shape.subshapes,
-          coordinates,
+          children,
+          shape.info.coordinates,
           shape.animations
         );
       }
 
       if (coordinates) {
-        shape.coordinates.x += coordinates.x;
-        shape.coordinates.y += coordinates.y;
+        shape.info.coordinates.x += coordinates.x;
+        shape.info.coordinates.y += coordinates.y;
       }
 
       if (animations) {
         if (!shape.animations) {
-          shape.animation = [];
+          shape.animations = [];
         }
         animations.map((an) => {
-          shape.animation.push(an);
+          shape.animations.push(an);
         });
       }
 
-      this.shapes.push(shape);
+      // Only push the animations the shapes that are not composite.
+      if (shape.info.name != 'composite') {
+        this.shapes.push(shape);
+      }
     }
+  }
+
+  getShape(fileName): Promise<any[]> {
+    // TODO: IMPLEMENT REJECT AND THROW AN ERROR.
+    return new Promise((resolve, reject) => {
+      this.getDataHttp(`assets/animations/${fileName}`).subscribe(
+        (data: any[]) => {
+          resolve(data);
+        }
+      );
+    });
   }
 
   getDataHttp(url: string) {

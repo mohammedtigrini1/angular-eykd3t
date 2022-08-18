@@ -1,30 +1,31 @@
 [
   {
     "info": {
-      "shape": "composite",
+      "name": "composite",
+      "file": "oxygen.json",
+      "coordinates": {
+        "x": 60,
+        "y": 60
+      }
+    }
+  },
+  {
+    "info": {
+      "name": "composite",
       "file": "hydrogen.json",
       "coordinates": {
-        "x": 20,
-        "y": 20
+        "x": 40,
+        "y": 40
       }
     }
   },
   {
     "info": {
-      "shape": "composite",
-      "file": "oxygen.json",
+      "name": "composite",
+      "file": "hydrogen.json",
       "coordinates": {
-        "x": 20,
-        "y": 20
-      }
-    }
-  },
-  {
-    "info": {
-      "file": "oxygen.json",
-      "coordinates": {
-        "x": 20,
-        "y": 20
+        "x": 80,
+        "y": 40
       }
     }
   }

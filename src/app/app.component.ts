@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import * as shapes from '../assets/animations/hydrogen';
+import * as shapes from '../assets/animations/H2O';
 import { ShapesService } from './shapes.service';
 import { InitService } from './init.service';
 // import * as animations from './test.json';
@@ -33,6 +33,9 @@ export class AppComponent {
     this.shapes = shapes.default;
 
     // Giving an id to the shapes.
+    // console.log(`Shapes: ${this.shapes}`);
+    this.shapes = await this.initService.getShapeArray(this.shapes);
+    console.log(this.shapes);
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
     // var chunks = [];
