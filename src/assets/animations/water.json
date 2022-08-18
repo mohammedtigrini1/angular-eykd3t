@@ -4,8 +4,8 @@
       "name": "composite",
       "file": "H2O.json",
       "coordinates": {
-        "x": 10,
-        "y": 10
+        "x": 60,
+        "y": 60
       }
     }
   },
@@ -14,18 +14,8 @@
       "name": "composite",
       "file": "H2O.json",
       "coordinates": {
-        "x": 20,
-        "y": 30
-      }
-    }
-  },
-  {
-    "info": {
-      "name": "composite",
-      "file": "H2O.json",
-      "coordinates": {
-        "x": 40,
-        "y": 50
+        "x": 100,
+        "y": 100
       }
     }
   }

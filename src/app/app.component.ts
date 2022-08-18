@@ -33,7 +33,6 @@ export class AppComponent {
     this.shapes = shapes.default;
 
     // Giving an id to the shapes.
-    // console.log(`Shapes: ${this.shapes}`);
     this.shapes = await this.initService.getShapeArray(this.shapes);
     console.log(this.shapes);
     this.shapes.map((shape, index) => (shape.info.id = index));

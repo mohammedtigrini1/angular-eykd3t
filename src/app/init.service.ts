@@ -21,7 +21,7 @@ export class InitService {
     for (let shape of shapes) {
       if (shape.info.name == 'composite') {
         let children = await this.getShape(shape.info.file);
-        this.constructShapeArray(
+        await this.constructShapeArray(
           children,
           shape.info.coordinates,
           shape.animations
