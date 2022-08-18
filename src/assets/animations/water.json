@@ -27,5 +27,34 @@
         }
       }
     ]
+  },
+  {
+    "info": {
+      "name": "composite",
+      "file": "H2O.json",
+      "coordinates": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    "animations": [
+      {
+        "name": "appear",
+        "t": 0
+      },
+      {
+        "name": "move",
+        "from": {
+          "t": 10,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "t": 2000,
+          "x": 100,
+          "y": 100
+        }
+      }
+    ]
   }
 ]
