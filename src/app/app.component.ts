@@ -31,10 +31,8 @@ export class AppComponent {
   async ngAfterViewInit() {
     this.drawService.canvas = this.myCanvas;
     this.shapes = shapes.default;
-    console.log(this.shapes)
     // Giving an id to the shapes.
     this.shapes = await this.initService.getShapeArray(this.shapes);
-    console.log(this.shapes);
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
     // var chunks = [];
