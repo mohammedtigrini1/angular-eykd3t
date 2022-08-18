@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import * as shapes from './animations/H2O';
+import * as shapes from '../assets/animations/H2O';
 
 @Injectable()
 export class InitService {
@@ -9,6 +9,9 @@ export class InitService {
   constructor(private http: HttpClient) {
     this.constructShapeArray(shapes.default);
     console.log(this.shapes);
+    this.getDataHttp('assets/animations/oxygen.json').subscribe((data) => {
+      console.log(data);
+    });
   }
 
   public constructShapeArray(
