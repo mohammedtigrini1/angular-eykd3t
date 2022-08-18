@@ -4,6 +4,7 @@ import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
 import * as shapes from './animations/hydrogen';
 import { ShapesService } from './shapes.service';
+import { InitService } from './init.service';
 // import * as animations from './test.json';
 
 @Component({
@@ -23,7 +24,8 @@ export class AppComponent {
   constructor(
     public drawService: DrawService,
     public shapeService: ShapesService,
-    public moveService: MoveService
+    public moveService: MoveService,
+    public initService: InitService
   ) {}
 
   async ngAfterViewInit() {

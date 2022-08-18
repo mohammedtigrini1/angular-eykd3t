@@ -1,7 +1,8 @@
 [
   {
     "info": {
-      "shape": "oxygen.json",
+      "shape": "composite",
+      "file": "hydrogen.json",
       "coordinates": {
         "x": 20,
         "y": 20
@@ -10,7 +11,8 @@
   },
   {
     "info": {
-      "shape": "hydrogen.json",
+      "shape": "composite",
+      "file": "oxygen.json",
       "coordinates": {
         "x": 20,
         "y": 20
@@ -19,7 +21,7 @@
   },
   {
     "info": {
-      "shape": "hydrogen.json",
+      "file": "oxygen.json",
       "coordinates": {
         "x": 20,
         "y": 20
