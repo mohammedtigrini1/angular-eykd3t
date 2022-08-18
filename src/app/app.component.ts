@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import * as shapes from '../assets/animations/H2O';
+import * as shapes from '../assets/animations/water';
 import { ShapesService } from './shapes.service';
 import { InitService } from './init.service';
 // import * as animations from './test.json';
