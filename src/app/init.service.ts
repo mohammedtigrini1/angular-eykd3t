@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as shapes from './animations/H2O';
 
@@ -5,10 +6,9 @@ import * as shapes from './animations/H2O';
 export class InitService {
   public shapes: any[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.constructShapeArray(shapes.default);
     console.log(this.shapes);
-    console.log(require('./animations/H20.json'));
   }
 
   public constructShapeArray(
@@ -41,5 +41,9 @@ export class InitService {
 
       this.shapes.push(shape);
     }
+  }
+
+  getDataHttp(url: string) {
+    return this.http.get(url);
   }
 }
