@@ -8,8 +8,8 @@
         "color": "#99ffd6"
       },
       "coordinates": {
-        "x": 70,
-        "y": 70
+        "x": 20,
+        "y": 20
       }
     },
     "animations": [
@@ -26,8 +26,8 @@
       "text": "(+) H",
       "color": "#000000",
       "coordinates": {
-        "x": 60,
-        "y": 75
+        "x": 10,
+        "y": 30
       }
     },
     "animations": [{ "name": "appear", "t": 0 }]
