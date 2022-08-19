@@ -9,12 +9,9 @@ FEATURES
 
 TODO:
 
-- Plus besoin de donner un id manuellement. Faire en sorte que ce soit l'index
-  du shit.
 - Rotate animation
 - How to override the coordinates of the animation?
 - Export logic for creating video.
-- Move animations.
 - Add rotate to the coordinates.
 - Compute the total duration of the animation by reading the json files
   - Add a function to replay the animation by pressing 'r'
