@@ -16,3 +16,6 @@ TODO:
 - Export logic for creating video.
 - Move animations.
 - Add rotate to the coordinates.
+- Compute the total duration of the animation by reading the json files
+  - Add a function to replay the animation by pressing 'r'
+  - Add a function to publish to youtube by pressing 'p'
