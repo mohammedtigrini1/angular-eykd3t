@@ -14,11 +14,11 @@ TODO:
 - How to override the coordinates of the animation?
 - Export logic for creating video.
 - Add rotate to the coordinates.
-- Compute the total duration of the animation by reading the json files
   - Add a function to replay the animation by pressing 'r'
   - Add a function to publish to youtube by pressing 'p'
 
 DONE
 
+- Compute the total duration of the animation by reading the json files
 - Play an animation by pressing 'p'
 - Make the animation into a video by pressing 'v'

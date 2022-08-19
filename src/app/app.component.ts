@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import SHAPES from '../assets/animations/pythagorian_theorem';
+import SHAPES from '../assets/animations/water';
 import { ShapesService } from './shapes.service';
 import { InitService } from './init.service';
 // import * as animations from './test.json';
@@ -39,18 +39,18 @@ export class AppComponent {
       // TODO: Find a way to speed up and not have to do this systematically
       this.shapeService.shapes = [];
       this.initService.shapes = [];
+      //  JSON.parse(JSON.stringify(SHAPES)) -> to copy object. Else it modifies this object.
       const shapes = await this.initService.getShapeArray(
         JSON.parse(JSON.stringify(SHAPES))
       );
       const totalDuration = await this.initService.getTotalDuration(
         JSON.parse(JSON.stringify(SHAPES))
       );
-      console.log(totalDuration);
       // TODO: Find a way to speed up and not have to do this systematically
 
       let currentTime = 0;
       const interval = setInterval(() => {
-        if (currentTime > totalDuration) {
+        if (currentTime > totalDuration + 1000) {
           this.shapeService.shapes = [];
           this.initService.shapes = [];
           this.isAnimationPlaying = false;

@@ -76,8 +76,7 @@ export class InitService {
       if (shape.animations) {
         for (let animation of shape.animations) {
           // Modify this every time the animation parameter changes (to find proper t)
-          console.log(animation);
-          const t = animation.t || animation.to.t;
+          const t = animation.t || animation.to ? animation.to.t : 0;
           if (t > this.totalDuration) {
             this.totalDuration = t;
           }
@@ -86,7 +85,7 @@ export class InitService {
 
       if (shape.info.name == 'composite') {
         let children = await this.getShape(shape.info.file);
-        await this.constructShapeArray(children);
+        await this.computeTotalDuration(children);
       }
     }
   }
