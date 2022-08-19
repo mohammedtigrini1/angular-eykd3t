@@ -61,4 +61,8 @@ export class InitService {
   getDataHttp(url: string) {
     return this.http.get(url);
   }
+
+  computeTotalDuration() {
+    // TODO
+  }
 }
