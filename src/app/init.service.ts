@@ -75,8 +75,13 @@ export class InitService {
     for (let shape of shapes) {
       if (shape.animations) {
         for (let animation of shape.animations) {
+          let t = 0;
           // Modify this every time the animation parameter changes (to find proper t)
-          const t = animation.t || animation.to ? animation.to.t : 0;
+          if (animation.t) {
+            t = animation.t;
+          } else if (animation.to && animation.to.t) {
+            t = animation.to.t;
+          }
           if (t > this.totalDuration) {
             this.totalDuration = t;
           }
