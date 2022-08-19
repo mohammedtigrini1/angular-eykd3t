@@ -9,6 +9,7 @@ FEATURES
 
 TODO:
 
+- Do some refactoring
 - Rotate animation
 - How to override the coordinates of the animation?
 - Export logic for creating video.
@@ -16,3 +17,8 @@ TODO:
 - Compute the total duration of the animation by reading the json files
   - Add a function to replay the animation by pressing 'r'
   - Add a function to publish to youtube by pressing 'p'
+
+DONE
+
+- Play an animation by pressing 'p'
+- Make the animation into a video by pressing 'v'

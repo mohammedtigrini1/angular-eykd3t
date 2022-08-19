@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import * as shapes from '../assets/animations/water';
+import SHAPES from '../assets/animations/pythagorian_theorem';
 import { ShapesService } from './shapes.service';
 import { InitService } from './init.service';
 // import * as animations from './test.json';
@@ -19,7 +19,6 @@ export class AppComponent {
 
   public totalTime = 6000;
   public step = 10;
-  public shapes;
   public isAnimationPlaying = false;
 
   constructor(
@@ -31,10 +30,6 @@ export class AppComponent {
 
   async ngAfterViewInit() {
     this.drawService.canvas = this.myCanvas;
-    this.shapes = shapes.default;
-    // Giving an id to the shapes.
-    // this.shapes = await this.initService.getShapeArray(this.shapes);
-    // this.shapes.map((shape, index) => (shape.info.id = index));
   }
 
   async playAnimation() {
@@ -42,16 +37,18 @@ export class AppComponent {
       this.isAnimationPlaying = true;
 
       // TODO: Find a way to speed up and not have to do this systematically
-      this.shapes = await this.initService.getShapeArray(shapes.default);
-      this.shapes.map((shape, index) => (shape.info.id = index));
       this.shapeService.shapes = [];
+      this.initService.shapes = [];
+      const shapes = await this.initService.getShapeArray(
+        JSON.parse(JSON.stringify(SHAPES))
+      );
       // TODO: Find a way to speed up and not have to do this systematically
 
       let currentTime = 0;
       const interval = setInterval(() => {
         if (currentTime > this.totalTime) {
-          this.shapes = [];
           this.shapeService.shapes = [];
+          this.initService.shapes = [];
           this.isAnimationPlaying = false;
           console.log('end');
           resolve(null);
@@ -59,7 +56,7 @@ export class AppComponent {
         }
 
         try {
-          for (let shape of this.shapes) {
+          for (let shape of shapes) {
             this.executeAnimation(shape, currentTime);
           }
 
@@ -114,7 +111,6 @@ export class AppComponent {
   // if person taps on space bar, stop loop.
   @HostListener('window:keydown', ['$event'])
   async keyEvent(event: any) {
-    console.log(event.code);
     if (event.code == 'KeyP') {
       // TODO: Logic to play the animation.
       if (!this.isAnimationPlaying) {

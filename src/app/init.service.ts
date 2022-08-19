@@ -11,6 +11,7 @@ export class InitService {
     this.shapes = [];
     await this.constructShapeArray(shapes);
     this.shapes = this.shapes.filter((shape) => shape.info.name != 'composite');
+    this.shapes.map((shape, index) => (shape.info.id = index));
     return this.shapes;
   }
 
