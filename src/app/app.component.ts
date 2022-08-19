@@ -42,11 +42,15 @@ export class AppComponent {
       const shapes = await this.initService.getShapeArray(
         JSON.parse(JSON.stringify(SHAPES))
       );
+      const totalDuration = await this.initService.getTotalDuration(
+        JSON.parse(JSON.stringify(SHAPES))
+      );
+      console.log(totalDuration);
       // TODO: Find a way to speed up and not have to do this systematically
 
       let currentTime = 0;
       const interval = setInterval(() => {
-        if (currentTime > this.totalTime) {
+        if (currentTime > totalDuration) {
           this.shapeService.shapes = [];
           this.initService.shapes = [];
           this.isAnimationPlaying = false;

@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class InitService {
   public shapes: any[] = [];
+  public totalDuration = 0;
 
   constructor(private http: HttpClient) {}
 
@@ -64,7 +65,29 @@ export class InitService {
     return this.http.get(url);
   }
 
-  computeTotalDuration() {
-    // TODO
+  async getTotalDuration(shapes) {
+    this.totalDuration = 0;
+    await this.computeTotalDuration(shapes);
+    return this.totalDuration;
+  }
+
+  async computeTotalDuration(shapes) {
+    for (let shape of shapes) {
+      if (shape.animations) {
+        for (let animation of shape.animations) {
+          // Modify this every time the animation parameter changes (to find proper t)
+          console.log(animation);
+          const t = animation.t || animation.to.t;
+          if (t > this.totalDuration) {
+            this.totalDuration = t;
+          }
+        }
+      }
+
+      if (shape.info.name == 'composite') {
+        let children = await this.getShape(shape.info.file);
+        await this.constructShapeArray(children);
+      }
+    }
   }
 }

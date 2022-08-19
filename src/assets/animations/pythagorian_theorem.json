@@ -10,7 +10,10 @@
       "text": "Pythagorean theorem",
       "color": "#000000"
     },
-    "animations": [{ "name": "appear", "t": 100 }]
+    "animations": [
+      { "name": "appear", "t": 100 },
+      { "name": "disappear", "t": 6000 }
+    ]
   },
   {
     "info": {
