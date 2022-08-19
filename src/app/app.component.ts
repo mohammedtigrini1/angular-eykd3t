@@ -58,7 +58,7 @@ export class AppComponent {
   }
 
   async animationLoop() {
-    this.shapes = await this.initService.getShapeArray(this.shapes);
+    this.shapes = await this.initService.getShapeArray(shapes.default);
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
 
