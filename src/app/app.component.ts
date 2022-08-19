@@ -32,9 +32,8 @@ export class AppComponent {
     this.drawService.canvas = this.myCanvas;
     this.shapes = shapes.default;
     // Giving an id to the shapes.
-    this.shapes = await this.initService.getShapeArray(this.shapes);
-    this.shapes.map((shape, index) => (shape.info.id = index));
-    this.shapeService.shapes = [];
+    // this.shapes = await this.initService.getShapeArray(this.shapes);
+    // this.shapes.map((shape, index) => (shape.info.id = index));
     // var chunks = [];
     // var canvas_stream = this.myCanvas.nativeElement.captureStream(30); // fps
     // // Create media recorder from canvas stream
@@ -52,24 +51,23 @@ export class AppComponent {
     // };
     // // // Start recording using a 1s timeslice [ie data is made available every 1s)
     // media_recorder.start(0);
-    await this.animationLoop();
     // console.log('FINISHED');
     // setTimeout(() => {
     //   media_recorder.stop();
     // }, 8000);
   }
 
-  animationLoop() {
+  async animationLoop() {
+    this.shapes = await this.initService.getShapeArray(this.shapes);
+    this.shapes.map((shape, index) => (shape.info.id = index));
+
+    this.shapeService.shapes = [];
     let currentTime = 0;
     const interval = setInterval(() => {
       if (currentTime > this.totalTime) {
-        if (this.isLooping) {
-          currentTime = 0;
-        } else {
-          console.log('end');
-          clearInterval(interval);
-          return;
-        }
+        this.shapeService.shapes = [];
+        console.log('end');
+        clearInterval(interval);
       }
 
       try {
@@ -139,8 +137,14 @@ export class AppComponent {
   private isLooping = false;
   // if person taps on space bar, stop loop.
   @HostListener('window:keydown', ['$event'])
-  spaceEvent(event: any) {
-    if (event.code == 'Space') {
+  async keyEvent(event: any) {
+    console.log(event.code);
+    if (event.code == 'KeyP') {
+      await this.animationLoop();
+      // TODO: Logic to play the animation.
+    } else if (event.code == 'KeyV') {
+      // TODO: Logic to create the video.
+    } else if (event.code == 'Space') {
       this.isLooping = !this.isLooping;
     }
   }
