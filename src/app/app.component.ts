@@ -60,8 +60,8 @@ export class AppComponent {
   async animationLoop() {
     this.shapes = await this.initService.getShapeArray(this.shapes);
     this.shapes.map((shape, index) => (shape.info.id = index));
-
     this.shapeService.shapes = [];
+
     let currentTime = 0;
     const interval = setInterval(() => {
       if (currentTime > this.totalTime) {
