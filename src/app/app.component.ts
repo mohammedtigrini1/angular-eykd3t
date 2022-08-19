@@ -61,10 +61,13 @@ export class AppComponent {
     this.shapes = await this.initService.getShapeArray(shapes.default);
     this.shapes.map((shape, index) => (shape.info.id = index));
     this.shapeService.shapes = [];
+    console.log(this.shapes);
+    console.log(this.shapeService.shapes);
 
     let currentTime = 0;
     const interval = setInterval(() => {
       if (currentTime > this.totalTime) {
+        this.shapes = [];
         this.shapeService.shapes = [];
         console.log('end');
         clearInterval(interval);

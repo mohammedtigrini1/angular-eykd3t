@@ -8,6 +8,7 @@ export class InitService {
   constructor(private http: HttpClient) {}
 
   public async getShapeArray(shapes: any[]) {
+    this.shapes = [];
     await this.constructShapeArray(shapes);
     this.shapes = this.shapes.filter((shape) => shape.info.name != 'composite');
     return this.shapes;
