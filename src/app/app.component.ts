@@ -20,6 +20,7 @@ export class AppComponent {
   public totalTime = 6000;
   public step = 10;
   public shapes;
+  public isAnimationPlaying = false;
 
   constructor(
     public drawService: DrawService,
@@ -34,57 +35,42 @@ export class AppComponent {
     // Giving an id to the shapes.
     // this.shapes = await this.initService.getShapeArray(this.shapes);
     // this.shapes.map((shape, index) => (shape.info.id = index));
-    // var chunks = [];
-    // var canvas_stream = this.myCanvas.nativeElement.captureStream(30); // fps
-    // // Create media recorder from canvas stream
-    // const media_recorder = new MediaRecorder(canvas_stream, {
-    //   videoBitsPerSecond: 2500000,
-    //   mimeType: 'video/webm',
-    // });
-    // // // Record data in chunks array when data is available
-    // media_recorder.ondataavailable = (evt) => {
-    //   chunks.push(evt.data);
-    // };
-    // // Provide recorded data when recording stops
-    // media_recorder.onstop = () => {
-    //   this.on_media_recorder_stop(chunks);
-    // };
-    // // // Start recording using a 1s timeslice [ie data is made available every 1s)
-    // media_recorder.start(0);
-    // console.log('FINISHED');
-    // setTimeout(() => {
-    //   media_recorder.stop();
-    // }, 8000);
   }
 
-  async animationLoop() {
-    this.shapes = await this.initService.getShapeArray(shapes.default);
-    this.shapes.map((shape, index) => (shape.info.id = index));
-    this.shapeService.shapes = [];
-    console.log(this.shapes);
-    console.log(this.shapeService.shapes);
+  async playAnimation() {
+    await new Promise(async (resolve, reject) => {
+      this.isAnimationPlaying = true;
 
-    let currentTime = 0;
-    const interval = setInterval(() => {
-      if (currentTime > this.totalTime) {
-        this.shapes = [];
-        this.shapeService.shapes = [];
-        console.log('end');
-        clearInterval(interval);
-      }
+      // TODO: Find a way to speed up and not have to do this systematically
+      this.shapes = await this.initService.getShapeArray(shapes.default);
+      this.shapes.map((shape, index) => (shape.info.id = index));
+      this.shapeService.shapes = [];
+      // TODO: Find a way to speed up and not have to do this systematically
 
-      try {
-        for (let shape of this.shapes) {
-          this.executeAnimation(shape, currentTime);
+      let currentTime = 0;
+      const interval = setInterval(() => {
+        if (currentTime > this.totalTime) {
+          this.shapes = [];
+          this.shapeService.shapes = [];
+          this.isAnimationPlaying = false;
+          console.log('end');
+          resolve(null);
+          clearInterval(interval);
         }
 
-        this.drawService.drawShapes();
-      } catch (err) {
-        console.error(err);
-      }
+        try {
+          for (let shape of this.shapes) {
+            this.executeAnimation(shape, currentTime);
+          }
 
-      currentTime += this.step;
-    }, this.step);
+          this.drawService.drawShapes();
+        } catch (err) {
+          console.error(err);
+        }
+
+        currentTime += this.step;
+      }, this.step);
+    });
   }
 
   executeAnimation(shape, currentTime) {
@@ -125,37 +111,46 @@ export class AppComponent {
       }
     }
   }
-
-  findShapesRecursively(shapes) {
-    for (let shape of shapes) {
-      if (shape.isRecursive) {
-        this.findShapesRecursively(shape.shapes);
-      }
-
-      return shape;
-    }
-  }
-
-  // TODO: PLAY ANIMATION ON A LOOP.
-  private isLooping = false;
   // if person taps on space bar, stop loop.
   @HostListener('window:keydown', ['$event'])
   async keyEvent(event: any) {
     console.log(event.code);
     if (event.code == 'KeyP') {
-      await this.animationLoop();
       // TODO: Logic to play the animation.
+      if (!this.isAnimationPlaying) {
+        await this.playAnimation();
+      } else {
+        console.log('Animation already playing.');
+      }
     } else if (event.code == 'KeyV') {
       // TODO: Logic to create the video.
-    } else if (event.code == 'Space') {
-      this.isLooping = !this.isLooping;
+      if (!this.isAnimationPlaying) {
+        var chunks = [];
+        var canvas_stream = this.myCanvas.nativeElement.captureStream(30); // fps
+        // Create media recorder from canvas stream
+        const media_recorder = new MediaRecorder(canvas_stream, {
+          videoBitsPerSecond: 2500000,
+          mimeType: 'video/webm',
+        });
+        // // Record data in chunks array when data is available
+        media_recorder.ondataavailable = (evt) => {
+          chunks.push(evt.data);
+        };
+        // Provide recorded data when recording stopsv
+        media_recorder.onstop = () => {
+          this.on_media_recorder_stop(chunks);
+        };
+        // // Start recording using a 1s timeslice [ie data is made available every 1s)
+        media_recorder.start(0);
+        await this.playAnimation();
+        media_recorder.stop();
+      } else {
+        console.log('Animation already playing.');
+      }
     }
   }
 
   on_media_recorder_stop(chunks) {
-    console.log('here', chunks);
-    // this.media_recorder = null;
-
     // Gather chunks of video data into a blob and create an object URL
     var blob = new Blob(chunks, { type: 'video/webm' });
     const recording_url = URL.createObjectURL(blob);
