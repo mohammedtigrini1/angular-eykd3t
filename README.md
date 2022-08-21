@@ -12,9 +12,9 @@ TODO:
 - Do some refactoring
 - Rotate animation
 - How to override the coordinates of the animation?
+- Export logic to load animation faster.
 - Export logic for creating video.
 - Add rotate to the coordinates.
-  - Add a function to replay the animation by pressing 'r'
   - Add a function to publish to youtube by pressing 'p'
 
 DONE
