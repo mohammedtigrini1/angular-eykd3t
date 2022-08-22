@@ -105,6 +105,7 @@ export class AppComponent {
         }
       } else if (animation.name == 'rotate') {
         // TODO
+        // Add the center of gravity of the thing in the coordinates in the loading script.
       } else if (animation.name == 'resize') {
         // TODO
       } else if (animation.name == 'changeColor') {
