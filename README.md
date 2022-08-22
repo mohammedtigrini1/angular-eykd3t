@@ -11,13 +11,13 @@ BACKLOG:
 
 - Publish shapes inside to a database.
 - Invoke shapes with a command an be able to edit them
+- Find a smart way to add voice to the project.
 
 TODO:
 
 - Do some refactoring
 - Rotate animation
 - How to override the coordinates of the animation?
-- Export logic to load animation faster.
 - Export logic for creating video.
 - Add rotate to the coordinates.
 - Add scaling logic
@@ -33,6 +33,7 @@ DONE
 - Compute the total duration of the animation by reading the json files
 - Play an animation by pressing 'p'
 - Make the animation into a video by pressing 'v'
+- Export logic to load animation faster.
 
 INFO
 3 STEPS TO ROTATE AN OBJECT
