@@ -43,6 +43,9 @@ ctx.fillRect(-width/2, -height/2, width, height);
 ctx.rotate(-angle _ Math.PI / 180);
 ctx.translate(-centerX, -centerY);
 
+// FOR COMPOSITE SHAPES : Most important thing would be that they all rotate
+// relative to a single point in space (in order to conserve the disposition of the object.)
+
 3 STEPS TO SCALE AN OBJECT
 ctx.scale(2, -2);
 ctx.font = '48px serif';
