@@ -3,9 +3,7 @@
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-eykd3t)
 
 FEATURES
-
-- MAKE DIFFERENT LEVEL OF ANIMATIONS. ONES FASTER AND THE OTHERS SLOWER.
-  OR MAKE SOMETHING SO THAT IT GOES FASTER.
+TODO: FINISH DEVELOPING A CRISTAL CLEAR VISION FOR THIS SOFTWARE
 
 BACKLOG:
 
@@ -24,8 +22,12 @@ TODO:
   - Add a function to publish to youtube by pressing 'y'
 
 - ROTATE AN OBJECT :
+
   - Find the center of gravity of a composite object.
     - Maybe first input manually the center of gravity.
+
+- SHAPE
+  - draw one (with a pen)
 
 DONE
 
