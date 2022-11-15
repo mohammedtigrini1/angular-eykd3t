@@ -11,7 +11,6 @@ BACKLOG:
 
 - Publish shapes inside to a database.
 - Invoke shapes with a command an be able to edit them
-- Find a smart way to add voice to the project.
 
 TODO:
 
@@ -26,7 +25,7 @@ TODO:
 
 - ROTATE AN OBJECT :
   - Find the center of gravity of a composite object.
-  - Maybe first input manually the center of gravity.
+    - Maybe first input manually the center of gravity.
 
 DONE
 
@@ -51,3 +50,6 @@ ctx.scale(2, -2);
 ctx.font = '48px serif';
 ctx.fillText('Hello world!', 100, -90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+BACKLOG
+Voice -> Use a voice over software on the created videos.
