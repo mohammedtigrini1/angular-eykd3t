@@ -55,3 +55,7 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 BACKLOG
 Voice -> Use a voice over software on the created videos.
+
+
+ANIMATIONS TO DO :
+Explanation of how Oauth works
