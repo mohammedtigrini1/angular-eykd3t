@@ -56,10 +56,10 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 BACKLOG
 Voice -> Use a voice over software on the created videos.
 
-
 OBJECTIVE
+
 - Better to do animations first, make them retrocompatible and work on the features
-as you need them while making the animations
+  as you need them while making the animations
 
 ANIMATIONS TO DO :
 
