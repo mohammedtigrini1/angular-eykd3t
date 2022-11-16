@@ -57,5 +57,13 @@ BACKLOG
 Voice -> Use a voice over software on the created videos.
 
 
+OBJECTIVE
+- Better to do animations first, make them retrocompatible and work on the features
+as you need them while making the animations
+
 ANIMATIONS TO DO :
-Explanation of how Oauth works
+
+- Explanation of how Oauth works
+- Explanation of how feature flags work
+  - Segmenting features
+  - Resume this video : https://www.youtube.com/watch?v=AJa2B-twtG4
