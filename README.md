@@ -4,30 +4,32 @@ Make animations while building the software and make those animations retrocompa
 Work on features as needed.
 Goal is to be able to create animations to resume knowledge really fast.
 
+# TODO
+
+- How to override the coordinates of the animation? TRY TO UNDERSTAND WHAT I MEANT WITH THAT
+- Migrate from a file based animations to database based animation
+
 # BACKLOG
 
 ### Shapes
 
-- Draw one with a pen
+- Draw one with a pen or line tools
   - Implement rotation for these shapes
   - Implement scaling for these shapes
 
 ### Features
 
-- Publish shapes inside to a database.
+- Publish shapes inside to a database (IN ORDER TO REUSE THEMP)
   - Capacity to reuse animations
-- Invoke shapes with a command an be able to edit them
+- Invoke shapes with a command and be able to edit them DETAIL THIS
   - Capacity to reuse shapes
+- Rotate an object
+  - Input manually the center of gravity of the object
+- Scale an object
 
 ### Voice
 
-- For Voice -> Use a voice over software on the created videos.
-
-### Tooling
-
-- Little tooling to be able to create shapes not through the json file but through
-  the software so to speak.
-  - Would necessit to be able to persist the shapes first.
+- For Voice -> Use a voice over software on the created videos (for now until I get the idea on how to incorporate the voice in a smart way)
 
 # DONE
 
@@ -36,30 +38,16 @@ Goal is to be able to create animations to resume knowledge really fast.
 - Make the animation into a video by pressing 'v'
 - Export logic to load animation faster.
 
-ANIMATIONS TO DO :
+# ANIMATIONS TO DO
 
 - Explanation of how Oauth works
 - Explanation of how feature flags work
   - Segmenting features
   - Resume this video : https://www.youtube.com/watch?v=AJa2B-twtG4
+- Explanation of how load balancers work as well as different algorithms for load balancing
 
-TODO:
+# TECHNICAL INFO
 
-- Do some refactoring
-- Rotate animation
-- How to override the coordinates of the animation?
-- Export logic for creating video.
-- Add rotate to the coordinates.
-- Add scaling logic
-
-- ROTATE AN OBJECT :
-
-  - Input manually the center of gravity
-
-- SHAPE
-  - draw one (with a pen)
-
-INFO
 3 STEPS TO ROTATE AN OBJECT
 ctx.translate(centerX, centerY);
 ctx.rotate(angle _ Math.PI / 180);
@@ -72,7 +60,22 @@ ctx.translate(-centerX, -centerY);
 // - Single point of failure
 
 3 STEPS TO SCALE AN OBJECT
-ctx.scale(2, -2);
+ctx.scale(2, -2); // scaling on the x and y axis
 ctx.font = '48px serif';
 ctx.fillText('Hello world!', 100, -90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+# FUTURE IDEAS
+
+### Tooling
+
+- Little tooling to be able to create shapes not through the interface rather than the json files.
+
+  - [PRE-REQ] Would necessit to be able to persist the shapes first.
+
+### Maybe later
+
+- Make the animations editable by the viewers
+- Focus on making byte size learning like tiktok, people's attention span is really small.
+  -> Break down complex concepts into byte size concepts that can be reviewable and disposed in a logical
+  fashion by folks (like build your own personal course)

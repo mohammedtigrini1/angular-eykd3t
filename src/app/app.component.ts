@@ -2,7 +2,7 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { DrawService } from './draw.service';
 import { MoveService } from './move.service';
-import SHAPES from '../assets/animations/water';
+import SHAPES from '../assets/animations/pythagorian_theorem';
 import { ShapesService } from './shapes.service';
 import { InitService } from './init.service';
 
