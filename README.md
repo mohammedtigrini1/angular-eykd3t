@@ -8,6 +8,9 @@ Goal is to be able to create animations to resume knowledge really fast.
 
 - How to override the coordinates of the animation? TRY TO UNDERSTAND WHAT I MEANT WITH THAT
 - Migrate from a file based animations to database based animation
+- Handle the working and creation of multiple new animations
+  - For example, I've finished creating this water molecule shape, I publish it (edit it). And now I
+    want to start from scratch.
 
 # BACKLOG
 
