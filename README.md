@@ -48,6 +48,8 @@ Goal is to be able to create animations to resume knowledge really fast.
   - Segmenting features
   - Resume this video : https://www.youtube.com/watch?v=AJa2B-twtG4
 - Explanation of how load balancers work as well as different algorithms for load balancing
+- Explanation of how data structures work
+  - Array, Linked list, stack, queue, binary tree, hash table, matrix, heap, graph
 
 # TECHNICAL INFO
 
