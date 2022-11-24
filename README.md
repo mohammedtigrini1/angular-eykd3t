@@ -50,6 +50,8 @@ Goal is to be able to create animations to resume knowledge really fast.
 - Explanation of how load balancers work as well as different algorithms for load balancing
 - Explanation of how data structures work
   - Array, Linked list, stack, queue, binary tree, hash table, matrix, heap, graph
+- Hashing algorithms
+  - md5, sha, etc
 
 # TECHNICAL INFO
 
