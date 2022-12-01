@@ -43,6 +43,8 @@ Goal is to be able to create animations to resume knowledge really fast.
 
 # ANIMATIONS TO DO
 
+## Learning
+
 - Explanation of how Oauth works
 - Explanation of how feature flags work
   - Segmenting features
@@ -52,6 +54,11 @@ Goal is to be able to create animations to resume knowledge really fast.
   - Array, Linked list, stack, queue, binary tree, hash table, matrix, heap, graph
 - Hashing algorithms
   - md5, sha, etc
+
+## Job
+
+- Explanation of the architecture in production
+  - How the different components interact with each other.
 
 # TECHNICAL INFO
 
